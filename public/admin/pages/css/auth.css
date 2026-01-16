@@ -1,0 +1,63 @@
+html, body {
+    font-family: 'Source Sans Pro Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.auth-links {
+    margin-top: 10px;
+}
+
+.login-logo {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-box-msg {
+    font-family: 'Source Sans Pro Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    width: 320px;
+    margin: auto auto;
+    padding-top: 3%;
+}
+
+.login-box-body, .register-box-body {
+    background: #f0f0f0;
+    padding: 16px 24px;
+    border-top: 0;
+    color: #666;
+    border-radius: .28571429rem;
+    box-shadow: 0 0 0 1px rgba(34, 36, 38, .22) inset, 0 0 0 0 transparent;
+}
+
+button {
+    border-radius: .28571429rem !important;
+}
+
+.support-heading {
+    font-size: 15px;
+}
+
+.panel, .panel-body {
+    background: #f0f0f0 !important;
+    box-shadow: 0 0 0 -2px rgba(34, 36, 38, .22) inset, 0 0 0 0 transparent;
+    height: 120px;
+    margin-bottom: 16px;
+
+}
+
+.panel-body p {
+    line-height: 1.4285em !important;
+    font-size: 14px;
+    margin: 0;
+}

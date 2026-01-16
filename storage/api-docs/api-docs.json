@@ -1,0 +1,2907 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Hamrofitness Api Documentation",
+        "description": "Hamrofitness Api Documentation",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/customer/attendance": {
+            "get": {
+                "tags": [
+                    "Attendance"
+                ],
+                "summary": "Customer attendance list",
+                "description": "Returns list of customer attendance",
+                "operationId": "attendance",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GymClientAttendanceResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/dashboard": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer dashboard",
+                "description": "Returns data for customer dashboard",
+                "operationId": "customerDashboard",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/diet-plans": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer diet plan. Add type:default for default diet plan list, and type:client for client specific diet plan list",
+                "description": "Returns data for customer diet plan. Add type:default for default diet plan list, and type:client for client specific diet plan list",
+                "operationId": "dietPlanList",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Type of diet plan to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "default"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DietPlanResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/training-plans": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer training plan. Add type:default for default training list, and type:client for client specific training list",
+                "description": "Returns data for customer training plan. Add type:default for default training list, and type:client for client specific training list",
+                "operationId": "trainingPlanList",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Type of training plan to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "default"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TrainingPlanResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/class-schedules": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer class plan. Type: default , client. Add type:default for default class schedule list, and type:client for client specific schedule list",
+                "description": "Returns data for customer class plan. Add type:default for default class schedule list, and type:client for client specific schedule list",
+                "operationId": "classPlanList",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Type of schedule to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "default"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClassScheduleResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/unread-notification": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Total unread notifications",
+                "description": "Return list of unread notifications",
+                "operationId": "unReadNotification",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "customer_id": {
+                                            "type": "integer",
+                                            "example": "12345"
+                                        },
+                                        "notification_type": {
+                                            "type": "string",
+                                            "example": "Subscription"
+                                        },
+                                        "title": {
+                                            "type": "string",
+                                            "example": "Subscription Added "
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/count-unread-notification": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Total number of unread notifications",
+                "description": "Return total count of unread notifications",
+                "operationId": "countUnReadNotification",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "unreadNotifications": {
+                                            "type": "integer",
+                                            "example": "50"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/markRead": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer notification mark read",
+                "description": "Customer notification mark read",
+                "operationId": "markReadNotifications",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/profile": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer profile",
+                "description": "Returns data of customer profile",
+                "operationId": "customerProfile",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GymClientResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/qr-info": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer profile",
+                "description": "Returns data of customer profile",
+                "operationId": "customerQRInfo",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/profile/store": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer profile store",
+                "description": "Update customer profile data",
+                "operationId": "customerProfileStore",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreProfileRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GymClientResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/profile/deactivate": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "Customer profile de-active",
+                "description": "Add Reason for customer profile de-active",
+                "operationId": "customerProfileDeactivate",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "remarks"
+                                ],
+                                "properties": {
+                                    "remarks": {
+                                        "type": "string",
+                                        "format": "remarks",
+                                        "example": "Remarks"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GymClientResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/locker-payments": {
+            "get": {
+                "tags": [
+                    "Locker Payment"
+                ],
+                "summary": "Get list of reservation payments",
+                "description": "Return data of reservations payment",
+                "operationId": "getLockerPaymentList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/locker-payments/store": {
+            "post": {
+                "tags": [
+                    "Locker Payment"
+                ],
+                "summary": "Add customer reservation",
+                "description": "Returns data of reservation done by customer",
+                "operationId": "customerReservationPaymentAdd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreReservationPaymentRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/locker/due-payments": {
+            "get": {
+                "tags": [
+                    "Locker Payment"
+                ],
+                "summary": "Get list of reservation due payments",
+                "description": "Return data of reservations due payment",
+                "operationId": "getReservationDuePaymentList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerReservationResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/login": {
+            "post": {
+                "tags": [
+                    "Login"
+                ],
+                "summary": "Customer login",
+                "description": "Authenticate customer and return token",
+                "operationId": "ab65f45d81eacf719db9bcc0b603970c",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "user@example.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "password"
+                                    },
+                                    "device_name": {
+                                        "type": "string",
+                                        "format": "device",
+                                        "example": "device"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful login",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "token": {
+                                            "type": "string",
+                                            "example": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Invalid credentials",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "type": "string",
+                                            "example": "Unauthorized"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/customer/payments": {
+            "get": {
+                "tags": [
+                    "Membership Payment"
+                ],
+                "summary": "Get list of subscription payments",
+                "description": "Return data of subscriptions payment",
+                "operationId": "getPaymentList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MembershipPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/payments/store": {
+            "post": {
+                "tags": [
+                    "Membership Payment"
+                ],
+                "summary": "Add customer subscription payment",
+                "description": "Returns data of subscription payment done by customer",
+                "operationId": "customerSubscriptionPaymentAdd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreMembershipPaymentRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MembershipPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/membership/due-payments": {
+            "get": {
+                "tags": [
+                    "Membership Payment"
+                ],
+                "summary": "Get list of subscription due payments",
+                "description": "Return data of subscriptions due payment",
+                "operationId": "getSubscriptionDuePaymentList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SubscriptionResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/product-lists": {
+            "get": {
+                "tags": [
+                    "Product Purchase"
+                ],
+                "summary": "Get list of all products",
+                "description": "Return listing of products",
+                "operationId": "getProductList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/product-purchases": {
+            "get": {
+                "tags": [
+                    "Product Purchase"
+                ],
+                "summary": "Get list of all product purchases",
+                "description": "Return listing of customer product purchases",
+                "operationId": "getProductPurchaseList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPurchaseResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/product-purchases/store": {
+            "post": {
+                "tags": [
+                    "Product Purchase"
+                ],
+                "summary": "Add customer product purchases",
+                "description": "Returns data of product purchases done by customer",
+                "operationId": "customerProductPurchaseAdd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreProductPurchaseRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPurchaseResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/product-purchases/show/{id}": {
+            "get": {
+                "tags": [
+                    "Product Purchase"
+                ],
+                "summary": "Get data of product purchases",
+                "description": "Return info of product purchases",
+                "operationId": "getProductPurchaseById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ProductPurchase id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPurchaseResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/product-purchases/destroy/{id}": {
+            "delete": {
+                "tags": [
+                    "Product Purchase"
+                ],
+                "summary": "Delete data of product purchases",
+                "description": "Remove product purchases",
+                "operationId": "deleteProductPurchaseById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ProductPurchase id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/locker-lists": {
+            "get": {
+                "tags": [
+                    "Locker Reservation"
+                ],
+                "summary": "Get list of all available locker lists",
+                "description": "Return listing of locker lists",
+                "operationId": "getAvailableLockerList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-reservation": {
+            "get": {
+                "tags": [
+                    "Locker Reservation"
+                ],
+                "summary": "Get list of all reservations",
+                "description": "Return listing of customer locker reservations",
+                "operationId": "getReservationList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerReservationResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-reservation/store": {
+            "post": {
+                "tags": [
+                    "Locker Reservation"
+                ],
+                "summary": "Add customer reservation",
+                "description": "Returns data of reservation done by customer. Add branch_id as customer->detail_id",
+                "operationId": "customerReservationAdd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreReservationRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerReservationResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-reservation/show/{id}": {
+            "get": {
+                "tags": [
+                    "Locker Reservation"
+                ],
+                "summary": "Get data of reservation",
+                "description": "Return info of reservations",
+                "operationId": "getReservationById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Reservation id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LockerReservationResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-reservation/destroy/{id}": {
+            "delete": {
+                "tags": [
+                    "Locker Reservation"
+                ],
+                "summary": "Delete data of reservation",
+                "description": "Remove reservations",
+                "operationId": "deleteReservationById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Reservation id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/membership-plans": {
+            "get": {
+                "tags": [
+                    "Membership Subscription"
+                ],
+                "summary": "Get list of all membership plans",
+                "description": "Return listing of membership plans",
+                "operationId": "getMembershipPlanList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MembershipPlanResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-subscription": {
+            "get": {
+                "tags": [
+                    "Membership Subscription"
+                ],
+                "summary": "Get list of all subscriptions",
+                "description": "Return listing of customer membership subscriptions",
+                "operationId": "getSubscriptionList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SubscriptionResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-subscription/store": {
+            "post": {
+                "tags": [
+                    "Membership Subscription"
+                ],
+                "summary": "Add customer subscription",
+                "description": "Returns data of subscription done by customer. Add branch_id as customer->detail_id",
+                "operationId": "customerSubscriptionAdd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreSubscriptionRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SubscriptionResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-subscription/show/{id}": {
+            "get": {
+                "tags": [
+                    "Membership Subscription"
+                ],
+                "summary": "Get data of subscription",
+                "description": "Return info of subscriptions",
+                "operationId": "getSubscriptionById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Subscription id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SubscriptionResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/manage-subscription/destroy/{id}": {
+            "delete": {
+                "tags": [
+                    "Membership Subscription"
+                ],
+                "summary": "Delete data of subscription",
+                "description": "Remove subscriptions",
+                "operationId": "deleteSubscriptionById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Subscription id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/productPayments": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Customer product payment list",
+                "description": "Returns list of customer product payments",
+                "operationId": "productPayment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/productPayments/store": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Add customer product payment",
+                "description": "Returns data of product payment done by customer",
+                "operationId": "customerProductPaymentStore",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StorePaymentRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPaymentResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/productPayments/due-payments": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Customer product due payment list",
+                "description": "Returns list of customer due product payments",
+                "operationId": "productDuePayment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductPurchaseResource"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error in input"
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/api/merchant/home": {
+            "get": {
+                "tags": [
+                    "Frontend"
+                ],
+                "summary": "Get home details",
+                "operationId": "ba11752a369581c49380f68fd75f0cad",
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/merchant-info/{mobileApp}": {
+            "get": {
+                "tags": [
+                    "Frontend"
+                ],
+                "summary": "Get merchant information",
+                "operationId": "49113ba6822619994d64845dfc15933b",
+                "parameters": [
+                    {
+                        "name": "mobileApp",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/tutorials": {
+            "get": {
+                "tags": [
+                    "Frontend"
+                ],
+                "summary": "Get tutorial information. Add type: image,text,image,audio,video",
+                "operationId": "20c21802dfc51d6168ce6d066dd657f5",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "The type of tutorial (optional)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/payment-sources": {
+            "get": {
+                "tags": [
+                    "Frontend"
+                ],
+                "summary": "Get Payment Sources information",
+                "operationId": "2495b65671b1613b7b6714da4e67eb2c",
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "StoreReservationPaymentRequest": {
+                "title": "Store LockerReservation Payment request",
+                "description": "Store Payment request body data",
+                "required": [
+                    "reservation_id",
+                    "payment_amount",
+                    "payment_source"
+                ],
+                "properties": {
+                    "reservation_id": {
+                        "title": "reservation_id",
+                        "description": "LockerReservation ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "payment_amount": {
+                        "title": "payment_amount",
+                        "description": "Payment amount",
+                        "type": "integer",
+                        "example": "100"
+                    },
+                    "payment_source": {
+                        "title": "payment_source",
+                        "description": "Payment source",
+                        "type": "string",
+                        "example": "Credit Card"
+                    },
+                    "remarks": {
+                        "title": "remarks",
+                        "description": "Remarks",
+                        "type": "string",
+                        "example": "Payment for lockers"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreReservationRequest": {
+                "title": "Store Reservation request",
+                "description": "Store Reservation request body data",
+                "required": [
+                    "branch_id",
+                    "locker_id",
+                    "cost",
+                    "joining_date"
+                ],
+                "properties": {
+                    "branch_id": {
+                        "title": "branch_id",
+                        "description": "Branch ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "locker_id": {
+                        "title": "locker_id",
+                        "description": "Locker ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "cost": {
+                        "title": "cost",
+                        "description": "Reservation cost",
+                        "type": "number",
+                        "format": "float",
+                        "example": "100"
+                    },
+                    "joining_date": {
+                        "title": "joining_date",
+                        "description": "Joining date",
+                        "type": "string",
+                        "example": "m/d/Y"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreSubscriptionRequest": {
+                "title": "Store Subscription request",
+                "description": "Store Subscription request body data",
+                "required": [
+                    "branch_id",
+                    "membership_id",
+                    "cost",
+                    "joining_date"
+                ],
+                "properties": {
+                    "branch_id": {
+                        "title": "branch_id",
+                        "description": "Branch ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "membership_id": {
+                        "title": "membership_id",
+                        "description": "Membership ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "cost": {
+                        "title": "cost",
+                        "description": "Subscription cost",
+                        "type": "number",
+                        "format": "float",
+                        "example": "100"
+                    },
+                    "joining_date": {
+                        "title": "joining_date",
+                        "description": "Joining date",
+                        "type": "string",
+                        "example": "m/d/Y"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreMembershipPaymentRequest": {
+                "title": "Store Subscription Payment request",
+                "description": "Store Payment request body data",
+                "required": [
+                    "purchase_id",
+                    "payment_amount",
+                    "payment_source"
+                ],
+                "properties": {
+                    "purchase_id": {
+                        "title": "purchase_id",
+                        "description": "Subscription ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "payment_amount": {
+                        "title": "payment_amount",
+                        "description": "Payment amount",
+                        "type": "integer",
+                        "example": "100"
+                    },
+                    "payment_source": {
+                        "title": "payment_source",
+                        "description": "Payment source",
+                        "type": "string",
+                        "example": "Credit Card"
+                    },
+                    "remarks": {
+                        "title": "remarks",
+                        "description": "Remarks",
+                        "type": "string",
+                        "example": "Payment for membership"
+                    }
+                },
+                "type": "object"
+            },
+            "StorePaymentRequest": {
+                "title": "Store Product Payment request",
+                "description": "Store Payment request body data",
+                "required": [
+                    "product_sale_id",
+                    "payment_amount",
+                    "payment_source"
+                ],
+                "properties": {
+                    "product_sale_id": {
+                        "title": "product_sale_id",
+                        "description": "Product sale ID",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "payment_amount": {
+                        "title": "payment_amount",
+                        "description": "Payment amount",
+                        "type": "integer",
+                        "example": "100"
+                    },
+                    "payment_source": {
+                        "title": "payment_source",
+                        "description": "Payment source",
+                        "type": "string",
+                        "example": "Credit Card"
+                    },
+                    "remarks": {
+                        "title": "remarks",
+                        "description": "Remarks",
+                        "type": "string",
+                        "example": "Payment for product"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreProductPurchaseRequest": {
+                "title": "Store Product Purchase Request",
+                "required": [
+                    "product",
+                    "product_quantity",
+                    "product_price",
+                    "amount",
+                    "branch_id"
+                ],
+                "properties": {
+                    "product": {
+                        "description": "Array of product IDs",
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "product_quantity": {
+                        "description": "Array of quantities for each product",
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "product_price": {
+                        "description": "Array of prices for each product",
+                        "type": "array",
+                        "items": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    "product_discount": {
+                        "description": "Array of discounts for each product",
+                        "type": "array",
+                        "items": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    "amount": {
+                        "description": "Array of total amounts for each product",
+                        "type": "array",
+                        "items": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    },
+                    "branch_id": {
+                        "description": "ID of the branch where the purchase is made",
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreProfileRequest": {
+                "title": "Store Customer profile request",
+                "description": "Store Customer profile request body data",
+                "required": [
+                    "first_name",
+                    "last_name",
+                    "mobile",
+                    "email",
+                    "gender"
+                ],
+                "properties": {
+                    "first_name": {
+                        "title": "First Name",
+                        "description": "First name of the customer",
+                        "type": "string",
+                        "example": "John"
+                    },
+                    "middle_name": {
+                        "title": "Middle Name",
+                        "description": "Middle name of the customer",
+                        "type": "string",
+                        "example": "Doe"
+                    },
+                    "last_name": {
+                        "title": "Last Name",
+                        "description": "Last name of the customer",
+                        "type": "string",
+                        "example": "Smith"
+                    },
+                    "mobile": {
+                        "title": "Mobile",
+                        "description": "Mobile number of the customer",
+                        "type": "string",
+                        "example": "+1234567890"
+                    },
+                    "emergency_contact": {
+                        "title": "Emergency Contact",
+                        "description": "Emergency Contact number of the customer",
+                        "type": "string",
+                        "example": "+1234567890"
+                    },
+                    "email": {
+                        "title": "Email",
+                        "description": "Email address of the customer",
+                        "type": "string",
+                        "example": "customer@example.com"
+                    },
+                    "gender": {
+                        "title": "Gender",
+                        "description": "Gender of the customer",
+                        "type": "string",
+                        "example": "male"
+                    },
+                    "marital_status": {
+                        "title": "Marital Status",
+                        "description": "Marital status of the customer",
+                        "type": "string",
+                        "example": "no"
+                    },
+                    "height_feet": {
+                        "title": "Height (Feet)",
+                        "description": "Height of the customer in feet",
+                        "type": "integer",
+                        "example": 5
+                    },
+                    "height_inches": {
+                        "title": "Height (Inches)",
+                        "description": "Height of the customer in inches",
+                        "type": "integer",
+                        "example": 9
+                    },
+                    "weight": {
+                        "title": "Weight",
+                        "description": "Weight of the customer",
+                        "type": "integer",
+                        "example": 160
+                    },
+                    "fat": {
+                        "title": "Fat",
+                        "description": "Fat of the customer",
+                        "type": "integer",
+                        "example": 160
+                    },
+                    "arms": {
+                        "title": "Arms",
+                        "description": "Arms of the customer",
+                        "type": "integer",
+                        "example": 160
+                    },
+                    "chest": {
+                        "title": "Chest",
+                        "description": "Chest of the customer",
+                        "type": "integer",
+                        "example": 160
+                    },
+                    "waist": {
+                        "title": "Waist",
+                        "description": "Waist of the customer",
+                        "type": "integer",
+                        "example": 160
+                    },
+                    "address": {
+                        "title": "Address",
+                        "description": "Address of the customer",
+                        "type": "string",
+                        "example": "123 Main St, Anytown, USA"
+                    },
+                    "dob": {
+                        "title": "Date of Birth",
+                        "description": "Date of birth of the customer",
+                        "type": "string",
+                        "example": "m/d/Y"
+                    },
+                    "anniversary": {
+                        "title": "Anniversary",
+                        "description": "Anniversary date of the customer",
+                        "type": "string",
+                        "example": "m/d/Y"
+                    },
+                    "password": {
+                        "title": "Password",
+                        "description": "Password of the customer",
+                        "type": "string",
+                        "example": "password123"
+                    },
+                    "blood_group": {
+                        "title": "BloodGroup",
+                        "description": "BloodGroup of the customer",
+                        "type": "string",
+                        "example": "o+"
+                    },
+                    "file": {
+                        "title": "File",
+                        "description": "Profile image file",
+                        "type": "string",
+                        "format": "binary"
+                    }
+                },
+                "type": "object"
+            },
+            "GymClientAttendanceResource": {
+                "title": "GymClientAttendanceResource",
+                "description": "GymClientAttendance resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/GymClientAttendance"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "GymClientAttendanceResource"
+                }
+            },
+            "GymClientResource": {
+                "title": "GymClientResource",
+                "description": "GymClient resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/GymClient"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "GymClientResource"
+                }
+            },
+            "ClassScheduleResource": {
+                "title": "ClassScheduleResource",
+                "description": "ClassSchedule resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/ClassSchedule"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "ClassScheduleResource"
+                }
+            },
+            "DietPlanResource": {
+                "title": "DietPlanResource",
+                "description": "DietPlan resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/DietPlan"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "DietPlanResource"
+                }
+            },
+            "TrainingPlanResource": {
+                "title": "TrainingPlanResource",
+                "description": "TrainingPlan resource",
+                "xml": {
+                    "name": "TrainingPlanResource"
+                }
+            },
+            "LockerCategoryResource": {
+                "title": "LockerCategoryResource",
+                "description": "LockerCategory resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/LockerCategory"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "LockerCategoryResource"
+                }
+            },
+            "LockerPaymentResource": {
+                "title": "LockerPaymentResource",
+                "description": "LockerPayment resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/LockerPayment"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "LockerPaymentResource"
+                }
+            },
+            "LockerReservationResource": {
+                "title": "LockerReservationResource",
+                "description": "LockerReservation resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/LockerReservation"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "LockerReservationResource"
+                }
+            },
+            "LockerResource": {
+                "title": "LockerResource",
+                "description": "Locker resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/Locker"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "LockerResource"
+                }
+            },
+            "MembershipPaymentResource": {
+                "title": "MembershipPaymentResource",
+                "description": "MembershipPayment resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/GymMembershipPayment"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "MembershipPaymentResource"
+                }
+            },
+            "MembershipPlanResource": {
+                "title": "MembershipPlanResource",
+                "description": "MembershipPlan resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/GymMembership"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "MembershipPlanResource"
+                }
+            },
+            "SubscriptionResource": {
+                "title": "SubscriptionResource",
+                "description": "Subscription resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/GymPurchase"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "SubscriptionResource"
+                }
+            },
+            "ProductPaymentResource": {
+                "title": "ProductPaymentResource",
+                "description": "Product Payment resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/ProductPayment"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "ProductPaymentResource"
+                }
+            },
+            "ProductPurchaseResource": {
+                "title": "ProductPurchaseResource",
+                "description": "Product Purchase resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/ProductSales"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "ProductPurchaseResource"
+                }
+            },
+            "ProductResource": {
+                "title": "ProductResource",
+                "description": "Product resource",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/Product"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "ProductResource"
+                }
+            },
+            "ClassSchedule": {
+                "title": "ClassSchedule",
+                "description": "ClassSchedule Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 5
+                    },
+                    "className": {
+                        "type": "string",
+                        "example": "Yoga"
+                    },
+                    "trainer": {
+                        "type": "string",
+                        "example": "John Doe"
+                    },
+                    "days": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "sunday"
+                        }
+                    },
+                    "startTime": {
+                        "type": "string",
+                        "format": "time",
+                        "example": "06:00:00"
+                    },
+                    "endTime": {
+                        "type": "string",
+                        "format": "time",
+                        "example": "07:00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "DietPlan": {
+                "title": "DietPlan",
+                "description": "DietPlan Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 8
+                    },
+                    "days": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "sunday",
+                            "monday",
+                            "tuesday",
+                            "wednesday",
+                            "thursday",
+                            "friday",
+                            "saturday"
+                        ]
+                    },
+                    "breakfast": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "lunch": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "dinner": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "meal_4": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "meal_5": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "GymClient": {
+                "title": "Gym Client",
+                "description": "Gym Client Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 6393
+                    },
+                    "first_name": {
+                        "type": "string",
+                        "example": "John"
+                    },
+                    "middle_name": {
+                        "type": "string",
+                        "example": "Doe"
+                    },
+                    "last_name": {
+                        "type": "string",
+                        "example": "Smith"
+                    },
+                    "dob": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": null
+                    },
+                    "gender": {
+                        "type": "string",
+                        "enum": [
+                            "male",
+                            "female",
+                            "other"
+                        ],
+                        "example": "male"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "example": "customer@example.com"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": null
+                    },
+                    "mobile": {
+                        "type": "string",
+                        "example": "1234567890"
+                    },
+                    "emergency_contact": {
+                        "type": "string",
+                        "example": "1234567890"
+                    },
+                    "blood_group": {
+                        "type": "string",
+                        "example": "a+"
+                    },
+                    "is_gym_experience": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "joining_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-02-06T00:00:00.000000Z"
+                    },
+                    "weight": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "fat": {
+                        "type": "integer",
+                        "example": null
+                    },
+                    "height_feet": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "height_inches": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "chest": {
+                        "type": "integer",
+                        "example": null
+                    },
+                    "waist": {
+                        "type": "integer",
+                        "example": null
+                    },
+                    "arms": {
+                        "type": "integer",
+                        "example": null
+                    },
+                    "image": {
+                        "type": "string",
+                        "example": "/uploads/profile_pic/master/image.jpeg"
+                    },
+                    "client_source": {
+                        "type": "string",
+                        "example": "huntplex"
+                    },
+                    "marital_status": {
+                        "type": "string",
+                        "enum": [
+                            "single",
+                            "married",
+                            "divorced",
+                            "widowed",
+                            "other"
+                        ],
+                        "example": "no"
+                    },
+                    "anniversary": {
+                        "type": "string",
+                        "format": "date",
+                        "example": null
+                    },
+                    "occupation": {
+                        "type": "string",
+                        "example": "Other"
+                    },
+                    "occupation_details": {
+                        "type": "string",
+                        "example": null
+                    },
+                    "redeem_points": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "referred_client_id": {
+                        "type": "integer",
+                        "example": 6379
+                    },
+                    "status": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": null
+                    },
+                    "device_name": {
+                        "type": "string",
+                        "example": "device"
+                    }
+                },
+                "type": "object"
+            },
+            "GymClientAttendance": {
+                "title": "Gym Client Attendance",
+                "description": "Gym Client Attendance Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 6393
+                    },
+                    "check_in": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-02-06T00:00:00.000000Z"
+                    },
+                    "check_out": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-02-06T00:00:00.000000Z"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "arrived"
+                    }
+                },
+                "type": "object"
+            },
+            "GymMembership": {
+                "title": "GymMembership",
+                "description": "GymMembership Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Membership Plan"
+                    },
+                    "price": {
+                        "type": "string",
+                        "example": "100"
+                    },
+                    "duration": {
+                        "type": "string",
+                        "example": "100"
+                    },
+                    "duration_type": {
+                        "type": "string",
+                        "enum": [
+                            "day",
+                            "week",
+                            "month",
+                            "year"
+                        ],
+                        "example": "month"
+                    },
+                    "details": {
+                        "type": "string",
+                        "example": "Membership details"
+                    }
+                },
+                "type": "object"
+            },
+            "GymMembershipPayment": {
+                "title": "GymMembership Payment",
+                "description": "GymMembership Payment Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "purchase": {
+                        "$ref": "#/components/schemas/GymPurchase"
+                    },
+                    "payment_id": {
+                        "type": "integer",
+                        "example": 987
+                    },
+                    "payment_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "payment_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "payment_source": {
+                        "type": "string",
+                        "example": "Credit Card"
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": "Payment details"
+                    }
+                },
+                "type": "object"
+            },
+            "GymPurchase": {
+                "title": "Membership Subscription",
+                "description": "Membership Subscription Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "membership_id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "membership": {
+                        "$ref": "#/components/schemas/GymMembership"
+                    },
+                    "purchase_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "paid_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 90
+                    },
+                    "discount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 10.5
+                    },
+                    "purchase_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "next_payment_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-08-15"
+                    },
+                    "expires_on": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-07-15T12:00:00Z"
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": "Subscription details"
+                    },
+                    "amount_to_be_paid": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 10.5
+                    },
+                    "payment_required": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "status": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "deleted_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": null
+                    },
+                    "is_renew": {
+                        "type": "boolean",
+                        "example": false
+                    }
+                },
+                "type": "object"
+            },
+            "Locker": {
+                "title": "Locker",
+                "description": "Locker Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "uuid": {
+                        "type": "string",
+                        "example": "65c1eb979e66f"
+                    },
+                    "locker_num": {
+                        "type": "string",
+                        "example": "A001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "available"
+                    },
+                    "details": {
+                        "type": "string",
+                        "example": "Locker details"
+                    },
+                    "locker_category": {
+                        "$ref": "#/components/schemas/LockerCategory"
+                    }
+                },
+                "type": "object"
+            },
+            "LockerCategory": {
+                "title": "LockerCategory",
+                "description": "LockerCategory Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "uuid": {
+                        "type": "string",
+                        "example": "65c1eb979e66f"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Small Locker"
+                    },
+                    "price": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 50
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "duration_type": {
+                        "type": "string",
+                        "enum": [
+                            "day",
+                            "week",
+                            "month",
+                            "year"
+                        ],
+                        "example": "month"
+                    },
+                    "details": {
+                        "type": "string",
+                        "example": "Locker category details"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "small",
+                            "medium",
+                            "large"
+                        ],
+                        "example": "small"
+                    },
+                    "three_month_price": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 120
+                    },
+                    "six_month_price": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 200
+                    },
+                    "one_year_price": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 350
+                    }
+                },
+                "type": "object"
+            },
+            "LockerPayment": {
+                "title": "Locker Payment",
+                "description": "Locker Payment Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "uuid": {
+                        "type": "string",
+                        "example": "65c1eb979e66f"
+                    },
+                    "reservation": {
+                        "$ref": "#/components/schemas/LockerReservation"
+                    },
+                    "payment_id": {
+                        "type": "integer",
+                        "example": 987
+                    },
+                    "payment_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "payment_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "payment_source": {
+                        "type": "string",
+                        "example": "Credit Card"
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": "Payment details"
+                    }
+                },
+                "type": "object"
+            },
+            "LockerReservation": {
+                "title": "Locker Reservation",
+                "description": "Locker Reservation Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "uuid": {
+                        "type": "string",
+                        "example": "65c1eb979e66f"
+                    },
+                    "locker_id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "locker": {
+                        "$ref": "#/components/schemas/Locker"
+                    },
+                    "purchase_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "paid_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 90
+                    },
+                    "discount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 10.5
+                    },
+                    "purchase_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "next_payment_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-08-15"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-07-15T12:00:00Z"
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": "Reservation details"
+                    },
+                    "amount_to_be_paid": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 10.5
+                    },
+                    "payment_required": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "status": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "deleted_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": null
+                    },
+                    "is_renew": {
+                        "type": "boolean",
+                        "example": false
+                    }
+                },
+                "type": "object"
+            },
+            "Product": {
+                "title": "Product",
+                "description": "Product Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "tag": {
+                        "type": "string",
+                        "example": "PROD123"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Protein Powder"
+                    },
+                    "brand_name": {
+                        "type": "string",
+                        "example": "HealthFit"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "example": 100
+                    },
+                    "price": {
+                        "type": "integer",
+                        "example": 100
+                    },
+                    "quantity_expired": {
+                        "type": "integer",
+                        "example": 10
+                    },
+                    "quantity_damaged": {
+                        "type": "integer",
+                        "example": 5
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "available"
+                    },
+                    "purchase_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2023-07-01"
+                    },
+                    "expire_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-07-01"
+                    }
+                },
+                "type": "object"
+            },
+            "ProductPayment": {
+                "title": "Product Payment",
+                "description": "Product Payment Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "product_sale": {
+                        "$ref": "#/components/schemas/ProductSales"
+                    },
+                    "payment_id": {
+                        "type": "integer",
+                        "example": 987
+                    },
+                    "payment_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "payment_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-07-15T12:00:00Z"
+                    },
+                    "payment_source": {
+                        "type": "string",
+                        "example": "cash"
+                    },
+                    "remarks": {
+                        "type": "string",
+                        "example": "Payment details"
+                    }
+                },
+                "type": "object"
+            },
+            "ProductSales": {
+                "title": "Product Purchase",
+                "description": "Product Purchase Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 123
+                    },
+                    "products": {
+                        "type": "string",
+                        "example": "products array"
+                    },
+                    "total_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "paid_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 90
+                    },
+                    "next_payment_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-08-15"
+                    },
+                    "payment_required": {
+                        "type": "string",
+                        "example": "yes"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "active"
+                    },
+                    "deleted_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": null
+                    }
+                },
+                "type": "object"
+            },
+            "TrainingPlan": {
+                "title": "TrainingPlan",
+                "description": "TrainingPlan Model",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 8
+                    },
+                    "days": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "sunday",
+                            "monday",
+                            "tuesday",
+                            "wednesday",
+                            "thursday",
+                            "friday",
+                            "saturday"
+                        ]
+                    },
+                    "level": {
+                        "type": "string",
+                        "example": "Level One"
+                    },
+                    "activity": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": "string"
+                    },
+                    "sets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": "string"
+                    },
+                    "repetition": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": "string"
+                    },
+                    "weights": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": "string "
+                    },
+                    "restTime": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": " string"
+                    },
+                    "startDate": {
+                        "type": "string",
+                        "example": "null"
+                    },
+                    "endDate": {
+                        "type": "string",
+                        "example": "null"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "passport": {
+                "type": "apiKey",
+                "description": "Laravel passport apiKey security.",
+                "in": "header",
+                "name": "Authorization",
+                "scheme": "https",
+                "flows": {
+                    "password": {
+                        "authorizationUrl": "http://localhost:8000/oauth/authorize",
+                        "tokenUrl": "http://localhost:8000/oauth/token",
+                        "refreshUrl": "http://localhost:8000/token/refresh",
+                        "scopes": []
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "passport": []
+        }
+    ]
+}
