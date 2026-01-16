@@ -65,6 +65,7 @@ class AttributeAnnotationFactory implements AnnotationFactoryInterface
                         foreach ($rp->getAttributes($attributeName, \ReflectionAttribute::IS_INSTANCEOF) as $attribute) {
                             /** @var OA\Property|OA\Parameter|OA\RequestBody $instance */
                             $instance = $attribute->newInstance();
+
                             $type = (($rnt = $rp->getType()) && $rnt instanceof \ReflectionNamedType) ? $rnt->getName() : Generator::UNDEFINED;
                             $nullable = $rnt ? $rnt->allowsNull() : true;
 
@@ -80,6 +81,9 @@ class AttributeAnnotationFactory implements AnnotationFactoryInterface
                                 $instance->nullable = $nullable ?: Generator::UNDEFINED;
 
                                 if ($rp->isPromoted()) {
+                                    // ensure each property has its own context
+                                    $instance->_context = new Context(['generated' => true, 'annotations' => [$instance]], $context);
+
                                     // promoted parameter - docblock is available via class/property
                                     if ($comment = $rp->getDeclaringClass()->getProperty($rp->getName())->getDocComment()) {
                                         $instance->_context->comment = $comment;
@@ -135,9 +139,9 @@ class AttributeAnnotationFactory implements AnnotationFactoryInterface
                 }
             }
 
-            // Property can be nested...
-            return $annotation->getRoot() != $possibleParent->getRoot()
-                && ($explicitParent || ($isAttachable && $isParentAllowed));
+            // Attachables can always be nested (unless explicitly restricted)
+            return ($isAttachable && $isParentAllowed)
+                || ($annotation->getRoot() != $possibleParent->getRoot() && $explicitParent);
         };
 
         $annotationsWithoutParent = [];

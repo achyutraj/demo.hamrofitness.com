@@ -1,0 +1,47 @@
+# .gitignore file created for free with Tower (https://www.git-tower.com/)
+# For suggestions or improvements please contact us using support@git-tower.com
+# Generated on 2026-01-16
+# Includes: laravel
+
+### Universal ###
+# Common files that should be ignored in all projects
+
+# Logs
+*.log
+# Temporary files
+*.tmp
+*~
+
+*.bak
+# Environment files (containing secrets, API keys, credentials)
+.env
+*.env
+.env.*
+
+# Local configuration that shouldn't be shared
+*.local
+
+### Laravel ###
+# Laravel framework specific files and directories
+
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+
+.env.backup
+storage/framework/
+storage/logs/
+.env.testing
+docker-compose.override.yml
+
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+*.sqlite
+.idea
+.vscode

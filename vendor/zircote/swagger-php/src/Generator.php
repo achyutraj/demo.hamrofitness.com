@@ -219,12 +219,24 @@ class Generator
                 $value = 'true' == $value;
             }
 
+            if ($isList = ('[]' == substr($key, -2))) {
+                $key = substr($key, 0, -2);
+            }
             $token = explode('.', $key);
             if (2 == count($token)) {
                 // 'operationId.hash' => false
-                $normalised[$token[0]][$token[1]] = $value;
+                // namespaced / processor
+                if ($isList) {
+                    $normalised[$token[0]][$token[1]][] = $value;
+                } else {
+                    $normalised[$token[0]][$token[1]] = $value;
+                }
             } else {
-                $normalised[$key] = $value;
+                if ($isList) {
+                    $normalised[$key][] = $value;
+                } else {
+                    $normalised[$key] = $value;
+                }
             }
         }
 
@@ -264,6 +276,9 @@ class Generator
                 new Processors\MergeXmlContent(),
                 new Processors\OperationId(),
                 new Processors\CleanUnmerged(),
+                new Processors\PathFilter(),
+                new Processors\CleanUnusedComponents(),
+                new Processors\AugmentTags(),
             ]);
         }
 
@@ -339,16 +354,7 @@ class Generator
         if (!$before) {
             $processors->add($processor);
         } else {
-            $matcher = function (array $pipes) use ($before) {
-                foreach ($pipes as $ii => $current) {
-                    if ($current instanceof $before) {
-                        return $ii;
-                    }
-                }
-
-                return null;
-            };
-            $processors->insert($processor, $matcher);
+            $processors->insert($processor, $before);
         }
 
         $this->processorPipeline = $processors;
@@ -422,13 +428,14 @@ class Generator
                 'analysis' => null,
                 'processor' => null,
                 'processors' => null,
+                'config' => [],
                 'logger' => null,
                 'validate' => true,
                 'version' => null,
             ];
 
         $processorPipeline = $config['processor'] ??
-            $config['processors'] ? new Pipeline($config['processors']) : null;
+            ($config['processors'] ? new Pipeline($config['processors']) : null);
 
         return (new Generator($config['logger']))
             ->setVersion($config['version'])
@@ -436,6 +443,7 @@ class Generator
             ->setNamespaces($config['namespaces'])
             ->setAnalyser($config['analyser'])
             ->setProcessorPipeline($processorPipeline)
+            ->setConfig($config['config'])
             ->generate($sources, $config['analysis'], $config['validate']);
     }
 
