@@ -1,0 +1,99 @@
+[2026-02-09 14:03:49] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:03:50] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:03:50] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:03:50] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:03:50] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:04:21] production.ERROR: Class "Barryvdh\Debugbar\ServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Barryvdh\\Debugbar\\ServiceProvider\" not found at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(659): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2026-02-09 14:06:50] production.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:36)
+[stacktrace]
+#0 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(88): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
+#3 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
+#4 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
+#5 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
+#6 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\\Foundation\\Application->make()
+#7 /var/www/stage.hamrofitness.com/public_html/vendor/livewire/livewire/src/LivewireServiceProvider.php(276): Illuminate\\Container\\Container->offsetGet()
+#8 /var/www/stage.hamrofitness.com/public_html/vendor/livewire/livewire/src/LivewireServiceProvider.php(79): Livewire\\LivewireServiceProvider->registerTagCompiler()
+#9 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Livewire\\LivewireServiceProvider->boot()
+#10 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#14 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(924): Illuminate\\Container\\Container->call()
+#15 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(905): Illuminate\\Foundation\\Application->bootProvider()
+#16 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#17 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): array_walk()
+#18 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#20 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#21 /var/www/stage.hamrofitness.com/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /var/www/stage.hamrofitness.com/public_html/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#23 {main}
+"} 
