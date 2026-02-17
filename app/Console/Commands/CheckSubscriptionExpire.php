@@ -39,7 +39,7 @@ class CheckSubscriptionExpire extends Command
      *
      * @return int
      */
-    public function handle()
+    public function handleOld()
     {
         $gymSettings = GymSetting::whereNotNull('options')->where('sms_status', 'enabled')->get();
         foreach ($gymSettings as $setting) {
@@ -69,6 +69,38 @@ class CheckSubscriptionExpire extends Command
 
         }
         return 0;
+    }
+
+    public function handle()
+    {
+        // Use the specific timezone for the query date
+        $date = now('Asia/Kathmandu')->toDateString();
+
+        // Process only active gyms with SMS enabled
+        GymSetting::where('sms_status', 'enabled')
+            ->chunk(50, function ($settings) use ($date) {
+                foreach ($settings as $setting) {
+                    $options = json_decode($setting->options, true);
+
+                    if (($options['membership_expire_status'] ?? 0) == 1) {
+                        $merchantId = $setting->getMerchantID($setting->detail_id);
+
+                        // Find and Notify
+                        GymPurchase::where('detail_id', $setting->detail_id)
+                            ->whereDate('expires_on', $date)
+                            ->with('client')
+                            ->chunkById(100, function ($purchases) use ($setting, $merchantId) {
+                                foreach ($purchases as $purchase) {
+                                    if ($purchase->client) {
+                                        $purchase->client->notify(
+                                            new MembershipExpiredNotification($purchase, $setting->detail_id, $merchantId)
+                                        );
+                                    }
+                                }
+                            });
+                    }
+                }
+            });
     }
 
     public function getExpireData($collection,$businessId,$merchantId){
