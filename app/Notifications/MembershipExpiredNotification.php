@@ -37,14 +37,14 @@ class MembershipExpiredNotification extends Notification implements ShouldQueue
         return [SmsChannel::class];
     }
 
-    public function toSms($notifiable): array
-    {
-        return [
-            'purchase'   => $this->purchase,
-            'businessId' => $this->businessId,
-            'merchantId' => $this->merchantId,
-        ];
-    }
+    // public function toSms($notifiable): array
+    // {
+    //     return [
+    //         'purchase'   => $this->purchase,
+    //         'businessId' => $this->businessId,
+    //         'merchantId' => $this->merchantId,
+    //     ];
+    // }
 
     /**
      * Get the mail representation of the notification.
