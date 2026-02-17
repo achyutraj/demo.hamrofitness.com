@@ -259,7 +259,7 @@ if (!function_exists('decodeJsonField')) {
     function decodeJsonField($field)
     {
         if (is_string($field)) {
-            $decoded = json_decode($field, true);
+            $decoded = json_decode($field, associative: true);
             return is_array($decoded) ? $decoded : [];
         }
         return is_array($field) ? $field : [];
