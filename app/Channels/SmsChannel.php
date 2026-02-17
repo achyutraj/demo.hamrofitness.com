@@ -21,16 +21,16 @@ class SmsChannel
         );
 
         // Audit Logging
-        DB::table('sms_logs')->insert([
-            'detail_id'    => $data['businessId'],
-            'client_id'    => $notifiable->id,
-            'phone_number' => $notifiable->mobile,
-            'status'       => $result['success'] ? 'sent' : 'failed',
-            'error_message'=> $result['success'] ? null : ($result['message'] ?? 'Unknown Error'),
-            'created_at'   => now(),
-            'updated_at'   => now(),
-            // 'msg_type'     => 'auto/manual/semiauto/insufficient credit'
-        ]);
+        // DB::table('sms_logs')->insert([
+        //     'detail_id'    => $data['businessId'],
+        //     'client_id'    => $notifiable->id,
+        //     'phone_number' => $notifiable->mobile,
+        //     'status'       => $result['success'] ? 'sent' : 'failed',
+        //     'error_message'=> $result['success'] ? null : ($result['message'] ?? 'Unknown Error'),
+        //     'created_at'   => now(),
+        //     'updated_at'   => now(),
+        //     // 'msg_type'     => 'auto/manual/semiauto/insufficient credit'
+        // ]);
 
         return $result;
     }
