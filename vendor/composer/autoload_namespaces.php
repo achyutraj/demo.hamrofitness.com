@@ -6,9 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Snowplow\\RefererParser' => array($vendorDir . '/snowplow/referer-parser/php/src'),
     'Milon\\Barcode' => array($vendorDir . '/milon/barcode/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Detection' => array($vendorDir . '/mobiledetect/mobiledetectlib/namespaced'),
-    'Bllim\\Datatables' => array($vendorDir . '/pragmarx/datatables/src'),
 );

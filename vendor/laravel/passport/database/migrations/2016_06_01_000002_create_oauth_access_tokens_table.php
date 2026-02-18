@@ -4,18 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class() extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        $schema = Schema::connection($this->getConnection());
-
-        $schema->create('oauth_access_tokens', function (Blueprint $table) {
+        Schema::create('oauth_access_tokens', function (Blueprint $table) {
             $table->string('id', 100)->primary();
             $table->unsignedBigInteger('user_id')->nullable()->index();
             $table->unsignedBigInteger('client_id');
@@ -29,23 +25,9 @@ return new class() extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        $schema = Schema::connection($this->getConnection());
-
-        $schema->dropIfExists('oauth_access_tokens');
-    }
-
-    /**
-     * Get the migration connection name.
-     *
-     * @return string|null
-     */
-    public function getConnection()
-    {
-        return config('passport.storage.database.connection');
+        Schema::dropIfExists('oauth_access_tokens');
     }
 };
