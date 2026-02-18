@@ -187,7 +187,6 @@ return [
         //PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Milon\Barcode\BarcodeServiceProvider::class,
     ],
 
     /*
