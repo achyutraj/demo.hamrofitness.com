@@ -47,7 +47,7 @@
                                 </div>
                             </div>
 
-                            {{ html()->form->open(['route'=>'gym-admin.superadmin.storeBranchPage','id'=>'branchStoreForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+                            {{ html()->form()->open(['route'=>'gym-admin.superadmin.storeBranchPage','id'=>'branchStoreForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) }}
                             <div class="form-wizard">
                                 <div class="form-body">
                                     <ul class="nav nav-pills nav-justified steps">
@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
                 </div>
