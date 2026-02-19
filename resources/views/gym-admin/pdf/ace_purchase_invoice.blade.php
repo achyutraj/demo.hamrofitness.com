@@ -268,7 +268,7 @@
                 <div id="invoiced_to">
                     <small>Billed To:</small>
                     <h2 class="name">{{ ucwords($invoice->business->title) }}</h2>
-                    <div>{!! nl2br($settings->address) !!}</div>
+                    <div>{{ nl2br($settings->address) }}</div>
                 </div>
             </td>
             <td>

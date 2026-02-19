@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('css/cropper.css')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/pages/css/profile.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("css/cropper.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/pages/css/profile.min.css") }}">
     <style>
         .error-msg {
             color: red;
@@ -116,11 +116,11 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/moment.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/profile.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/moment.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/profile.min.js") }}"></script>
 
 @stop

@@ -62,7 +62,7 @@
                             @endforeach
                             <td>{{ $measurements['height'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['height']) !!}
+                                {{ progressStatus($measurements['height']) }}
                             </td>
                         </tr>
                         <tr>
@@ -72,7 +72,7 @@
                             @endforeach
                             <td>{{ $measurements['weight'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['weight']) !!}
+                                {{ progressStatus($measurements['weight']) }}
                             </td>
                         </tr>
                         <tr>
@@ -82,7 +82,7 @@
                             @endforeach
                             <td>{{ $measurements['fat'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['fat']) !!}
+                                {{ progressStatus($measurements['fat']) }}
                             </td>
                         </tr>
                         <tr>
@@ -92,7 +92,7 @@
                             @endforeach
                             <td>{{ $measurements['fore_arms'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['fore_arms']) !!}
+                                {{ progressStatus($measurements['fore_arms']) }}
                             </td>
                         </tr>
                         <tr>
@@ -102,7 +102,7 @@
                             @endforeach
                             <td>{{ $measurements['neck'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['neck']) !!}
+                                {{ progressStatus($measurements['neck']) }}
                             </td>
                         </tr>
                         <tr>
@@ -112,7 +112,7 @@
                             @endforeach
                             <td>{{ $measurements['shoulder'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['shoulder']) !!}
+                                {{ progressStatus($measurements['shoulder']) }}
                             </td>
                         </tr>
                         <tr>
@@ -122,7 +122,7 @@
                             @endforeach
                             <td>{{ $measurements['chest'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['chest']) !!}
+                                {{ progressStatus($measurements['chest']) }}
                             </td>
                         </tr>
                         <tr>
@@ -132,7 +132,7 @@
                             @endforeach
                             <td>{{ $measurements['waist'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['waist']) !!}
+                                {{ progressStatus($measurements['waist']) }}
                             </td>
                         </tr>
                         <tr>
@@ -142,7 +142,7 @@
                             @endforeach
                             <td>{{ $measurements['hip'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['hip']) !!}
+                                {{ progressStatus($measurements['hip']) }}
                             </td>
                         </tr>
                         <tr>
@@ -152,7 +152,7 @@
                             @endforeach
                             <td>{{ $measurements['thigh'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['thigh']) !!}
+                                {{ progressStatus($measurements['thigh']) }}
                             </td>
                         </tr>
                         <tr>
@@ -162,7 +162,7 @@
                             @endforeach
                             <td>{{ $measurements['calves'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['calves']) !!}
+                                {{ progressStatus($measurements['calves']) }}
                             </td>
                         </tr>
                         <tr>
@@ -172,7 +172,7 @@
                             @endforeach
                             <td>{{ $measurements['arms'] }}</td>
                             <td>
-                                {!! progressStatus($measurements['arms']) !!}
+                                {{ progressStatus($measurements['arms']) }}
                             </td>
                         </tr>
                         </tbody>

@@ -1,12 +1,12 @@
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
     <span class="caption-subject font-red-sunglo bold uppercase"><i class="fa fa-list"></i> Follow Up History</span>
 </div>
 <div class="modal-body">
-    {!! Form::open(['id'=>'followUpForm','class'=>'ajax-form']) !!}
+    {{ html()->form()->open(['id'=>'followUpForm','class'=>'ajax-form']) }}
 
     <input type="hidden" name="enquiry_id" value="{{ $enquiry->id }}">
 
@@ -39,13 +39,13 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    Package amount: {!!  ($follow->package_amount != '') ? 'NRs '.$follow->package_amount : "Not set" !!}
+                                    Package amount: {{ ($follow->package_amount != '') ? 'NRs '.$follow->package_amount : "Not set" }}
                                 </div>
                             </div>
                             <div class="row margin-top-5">
                                 <div class="col-md-12">
                                     Remark: <br>
-                                    {!!  ($follow->remark != '') ? ucfirst($follow->remark) : "<span class='font-red'>Empty</span>" !!}
+                                    {{ ($follow->remark != '') ? ucfirst($follow->remark) : "<span class='font-red'>Empty</span>" }}
 
                                 </div>
                             </div>
@@ -68,8 +68,8 @@
     <div class="modal-footer">
         <a href="javascript:;" class="btn blue"  data-dismiss="modal" aria-hidden="true" >OK</a>
     </div>
-    {!! Form::close() !!}
+    {{ html()->form()->close() }}
 </div>
 
-{!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">

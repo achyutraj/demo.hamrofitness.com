@@ -1,0 +1,256 @@
+resources/views/customer/reset.blade.php:                {{ html()->form->open(array('route' => ['customer.update-password'], 'method' => 'POST', "id" => "resetform", "class" => 'ajax-form form-horizontal form-material')) !!}
+resources/views/customer/reset.blade.php:                {{ html()->form->close() !!}
+resources/views/customer/register.blade.php:                {{ html()->form->open(array('route' => ['customer.register-store'], 'method' => 'POST', "id" => "registerform", "class" => 'ajax-form form-horizontal form-material')) !!}
+resources/views/customer/register.blade.php:                {{ html()->form->close() !!}
+resources/views/customer-app/product-payments/create.blade.php:                        {{ html()->form->open(['route'=>['customer-app.product-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/product-payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/customer-app/message/create.blade.php:        {{ html()->form->open(['route'=>'customer-app.message.store','id'=>'composeMailForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/message/create.blade.php:        {{ html()->form->close() !!}
+resources/views/customer-app/manage-subscription/create.blade.php:                        {{ html()->form->open(['route'=>'customer-app.manage-subscription.store','id'=>'addSubscriptionStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/manage-subscription/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/customer-app/payments/create.blade.php:                        {{ html()->form->open(['route'=>['customer-app.payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/customer-app/profile/index.blade.php:                        {{ html()->form->open(['route'=>'customer-app.profile.store','id'=>'profileForm','class'=>'form-material ajax-form','method'=>'POST','files' => true]) !!}
+resources/views/customer-app/profile/index.blade.php:                        {{ html()->form->close() !!}
+resources/views/customer-app/feedbacks/index.blade.php:            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/feedbacks/index.blade.php:            {{ html()->form->close() !!}
+resources/views/customer-app/lockers/reservations/create.blade.php:                        {{ html()->form->open(['route'=>'customer-app.manage-subscription.store','id'=>'addReservationStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/lockers/reservations/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/customer-app/lockers/payments/create.blade.php:                        {{ html()->form->open(['route'=>['customer-app.locker-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
+resources/views/customer-app/lockers/payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/fitsigma/reset.blade.php:    {{ html()->form->open(array('route' => ['merchant.login.update-password'], 'method' => 'POST', "id" => "update-password-form", "class" => 'login-form')) !!}
+resources/views/fitsigma/reset.blade.php:    {{ html()->form->close() !!}
+resources/views/fitsigma/login.blade.php:            {{-- {{ html()->form->open(array("id" => "login-form", "class" => 'login-form')) }} --}}
+resources/views/gym-admin/i-card/index.blade.php:                                {{ html()->form->open(['id'=>'generateICardForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/i-card/index.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/i-card/barcode.blade.php:                                {{ html()->form->open(['id'=>'generateICardForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/i-card/barcode.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/push_notification/create.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/push_notification/create.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/push_notification/edit.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/push_notification/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/employ/attendance/checkout.blade.php:        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/employ/attendance/checkout.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/employ/attendance/checkin.blade.php:        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/employ/attendance/checkin.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/employ/role.blade.php:                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) !!} -->
+resources/views/gym-admin/classSchedule/create.blade.php:                            {{ html()->form->open(['id'=>'storeFormData','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/classSchedule/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/classSchedule/edit.blade.php:                            {{ html()->form->open(['id'=>'storeFormData','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/classSchedule/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/products/create-edit.blade.php:                            {{ html()->form->open(['id'=>'create-edit-product','class'=>'ajax-form']) !!}
+resources/views/gym-admin/products/create-edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/products/quantity.blade.php:                                        {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/products/quantity.blade.php:                                        {{ html()->form->close() !!}
+resources/views/gym-admin/products/index.blade.php:                                                            {{ html()->form->open(['route' => ['gym-admin.products.destroy', $product->uuid], 'class' => 'delete', 'method' => 'DELETE']) !!}
+resources/views/gym-admin/products/index.blade.php:                                                            {{ html()->form->close() !!}
+resources/views/gym-admin/products/payments/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/products/payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/products/payments/add_payment_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/products/payments/add_payment_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/products/payments/edit.blade.php:                            {{ html()->form->open(['id'=>'updatePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/products/payments/edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/products/sales/index.blade.php:                                                            {{ html()->form->open(['route' => ['gym-admin.sales.destroy', $product->id], 'class' => 'delete', 'method' => 'DELETE']) !!}
+resources/views/gym-admin/products/sales/index.blade.php:                                                            {{ html()->form->close() !!}
+resources/views/gym-admin/lockscreen.blade.php:                        {{ html()->form->open(array('route' => ['merchant.lockLogin'], 'method' => 'POST', "id" => "login-form", "class" => 'form-inline')) !!}
+resources/views/gym-admin/lockscreen.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/body_measurement/progress.blade.php:                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/body_measurement/progress.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/body_measurement/calculator.blade.php:                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/body_measurement/calculator.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/body_measurement/create.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/body_measurement/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/body_measurement/edit.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/body_measurement/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/email_promotion/create.blade.php:                                {{ html()->form->open(['id'=>'sendPromotionForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/email_promotion/create.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/email_promotion/edit.blade.php:                                {{ html()->form->open(['id'=>'sendPromotionForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/email_promotion/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/subscription.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/subscription.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/profile.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/profile.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/complete.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/complete.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/payment.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/payment.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/client.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'clients_details','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/client.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/account_setup/membership.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'form_sample_3','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/account_setup/membership.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/software-update/create-edit.blade.php:                             {{ html()->form->open(['id'=>'gym-software-data','class'=>'ajax-form']) !!}
+resources/views/gym-admin/software-update/create-edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/gymroles/create.blade.php:                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!} -->
+resources/views/gym-admin/gymroles/assign_permission.blade.php:                            {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/gymroles/assign_permission.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/gymroles/edit.blade.php:                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'PUT','files' => true]) !!} -->
+resources/views/gym-admin/promotional-db/create.blade.php:                {{ html()->form->open(['route'=>'gym-admin.client.store','id'=>'clients_details','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/promotional-db/create.blade.php:                {{ html()->form->close() !!}
+resources/views/gym-admin/promotional-db/edit.blade.php:                {{ html()->form->open(['route'=>'gym-admin.client.update','id'=>'clients_details','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/promotional-db/edit.blade.php:                {{ html()->form->close() !!}
+resources/views/gym-admin/users/create.blade.php:                              {{ html()->form->open(['route'=> ['gym-admin.users.store'],'id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/users/create.blade.php:                              {{ html()->form->close() !!}
+resources/views/gym-admin/users/assign_role_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/users/assign_role_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/business-renew.blade.php:    {{ html()->form->open(['id' => 'followUpForm', 'class' => 'ajax-form']) !!}
+resources/views/gym-admin/super-admin/business-renew.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/create-branches/permission.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.superadmin.permission','id'=>'branchPermissionForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/super-admin/create-branches/permission.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/create-branches/manager.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.superadmin.store','id'=>'managerStoreForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/super-admin/create-branches/manager.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/create-branches/role.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.superadmin.storeRolePage','id'=>'roleStoreForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/super-admin/create-branches/role.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/edit-branch.blade.php:                                    {{ html()->form->open(['id'=>'branchStoreForm','class'=>'ajax-form form-horizontal']) !!}
+resources/views/gym-admin/super-admin/edit-branch.blade.php:                                    {{ html()->form->close() !!}
+resources/views/gym-admin/super-admin/edit-branch.blade.php:                                    {{ html()->form->open(['id'=>'updateRolesAndPermissionForm','class'=>'ajax-form form-horizontal']) !!}
+resources/views/gym-admin/super-admin/edit-branch.blade.php:                                    {{ html()->form->close() !!}
+resources/views/gym-admin/expense/create-edit.blade.php:                            {{ html()->form->open(['id'=>'create-edit-expense','class'=>'ajax-form','files'=>true]) !!}
+resources/views/gym-admin/expense/create-edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/expense/category.blade.php:                                    {{ html()->form->open(['id'=>'edit-category-'.$category->uuid,'class'=>'ajax-form']) !!}
+resources/views/gym-admin/expense/category.blade.php:                                    {{ html()->form->close() !!}
+resources/views/gym-admin/expense/category.blade.php:            {{ html()->form->open(['id'=>'create-category','class'=>'ajax-form']) !!}
+resources/views/gym-admin/expense/category.blade.php:            {{ html()->form->close() !!}
+resources/views/gym-admin/message/create.blade.php:        {{ html()->form->open(['route'=>'gym-admin.message.store','id'=>'composeMailForm','class'=>'ajax-form form-material','method'=>'POST']) !!}
+resources/views/gym-admin/message/create.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/sms/create.blade.php:                            {{ html()->form->open(['id' => 'storePayments', 'class' => 'ajax-form', 'method' => 'POST']) !!}
+resources/views/gym-admin/sms/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/emails/create.blade.php:        {{ html()->form->open(['route'=>'gym-admin.emails.store','id'=>'composeMailForm','class'=>'ajax-form form-material','method'=>'POST']) !!}
+resources/views/gym-admin/emails/create.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/templates/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/templates/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/templates/edit.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/templates/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/membership/create.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/membership/create.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/membership/edit.blade.php:                                {{ html()->form->open(['id' => 'form_sample_3', 'class' => 'ajax-form', 'method' => 'POST']) !!}
+resources/views/gym-admin/membership/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/gymenquiry/view_follow_modal.blade.php:    {{ html()->form->open(['id'=>'followUpForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/gymenquiry/view_follow_modal.blade.php:    {{ html()->form->close() !!}
+resources/views/gym-admin/gymenquiry/status.blade.php:    {{ html()->form->open(['id'=>'changeStatusForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/gymenquiry/status.blade.php:    {{ html()->form->close() !!}
+resources/views/gym-admin/gymenquiry/follow_modal.blade.php:    {{ html()->form->open(['id'=>'followUpForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/gymenquiry/follow_modal.blade.php:    {{ html()->form->close() !!}
+resources/views/gym-admin/payments/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/payments/receipt.blade.php:        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/payments/receipt.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/payments/add_payment_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/payments/add_payment_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/payments/edit.blade.php:                            {{ html()->form->open(['id'=>'updatePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/payments/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/profile/profile.blade.php:                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/profile/profile.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/booking/show.blade.php:            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form form-horizontal form-row-seperated','method'=>'POST']) !!}
+resources/views/gym-admin/booking/show.blade.php:            {{ html()->form->close() !!}
+resources/views/gym-admin/incomes/create-edit.blade.php:                            {{ html()->form->open(['id'=>'create-edit-income','class'=>'ajax-form','files'=>true]) !!}
+resources/views/gym-admin/incomes/create-edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/incomes/category.blade.php:                                    {{ html()->form->open(['id'=>'edit-category-'.$category->uuid,'class'=>'ajax-form']) !!}
+resources/views/gym-admin/incomes/category.blade.php:                                    {{ html()->form->close() !!}
+resources/views/gym-admin/incomes/category.blade.php:            {{ html()->form->open(['id'=>'create-category','class'=>'ajax-form']) !!}
+resources/views/gym-admin/incomes/category.blade.php:            {{ html()->form->close() !!}
+resources/views/gym-admin/purchase/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/purchase/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/purchase/extend_subscription_modal.blade.php:        {{ html()->form->open(['id'=>'storeExtend','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/purchase/extend_subscription_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/purchase/renew_subscription_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/purchase/renew_subscription_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/purchase/freeze-modal.blade.php:        {{ html()->form->open(['id'=>'storeFreeze','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/purchase/freeze-modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/purchase/edit.blade.php:                            {{ html()->form->open(['id'=>'updatePurchase','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/purchase/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/setting/file-upload.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storeFileUploadCredentials','id'=>'fileUploadCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/setting/file-upload.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/footer.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storeMailCredentials','id'=>'footerCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/setting/footer.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/sms.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storeSmsCredentials','id'=>'smsCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/setting/sms.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/other.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storeOtherSettingCredentials','id'=>'otherCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/setting/other.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/general.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.store','id'=>'settingUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+resources/views/gym-admin/setting/general.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/notification.blade.php:                    {{ html()->form->open(['id'=>'notificationStore','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/setting/notification.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/payments.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storePayments','id'=>'paymentCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/setting/payments.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/setting/mail.blade.php:                    {{ html()->form->open(['route'=>'gym-admin.setting.storeMailCredentials','id'=>'mailCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files'
+resources/views/gym-admin/setting/mail.blade.php:                    {{ html()->form->close() !!}
+resources/views/gym-admin/reports/bank/index.blade.php:                            {{ html()->form->open(['id'=>'createBankReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/bank/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/client/index.blade.php:                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/client/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/enquiry/index.blade.php:                            {{ html()->form->open(['id'=>'createEnquiryReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/enquiry/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/branchRenew/index.blade.php:                            {{ html()->form->open(['id'=>'createBranchReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/branchRenew/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/balance/index.blade.php:                            {{ html()->form->open(['id'=>'createBalanceReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/balance/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/booking/index.blade.php:                            {{ html()->form->open(['id'=>'createBookingReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/booking/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/product_sell/index.blade.php:                            {{ html()->form->open(['id'=>'createProductSaleReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/product_sell/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/finance/index.blade.php:                            {{ html()->form->open(['id'=>'createFinanceReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/finance/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/attendance/index.blade.php:                            {{ html()->form->open(['id'=>'createAttendanceReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/attendance/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/attendance/bio.blade.php:                            {{ html()->form->open(['id'=>'createAttendanceReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/attendance/bio.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/reservation/index.blade.php:                            {{ html()->form->open(['id'=>'createBookingReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/reservation/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/expenses/index.blade.php:                            {{ html()->form->open(['id'=>'createReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/expenses/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/expenses/income.blade.php:                            {{ html()->form->open(['id'=>'createReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/expenses/income.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/reports/target/index.blade.php:                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+resources/views/gym-admin/reports/target/index.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/invoice/create_product_payment_invoice.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/invoice/create_product_payment_invoice.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/invoice/create_payment_invoice.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/invoice/create_payment_invoice.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/invoice/create_invoice.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/invoice/create_invoice.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/attendance/checkout.blade.php:        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/attendance/checkout.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/attendance/checkin.blade.php:        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/attendance/checkin.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/reservations/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/reservations/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/reservations/renew_reservation_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/reservations/renew_reservation_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/reservations/edit.blade.php:                            {{ html()->form->open(['id'=>'updatePurchase','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/reservations/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/create.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/create.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/payments/create.blade.php:                            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/payments/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/payments/add_payment_modal.blade.php:        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/payments/add_payment_modal.blade.php:        {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/payments/edit.blade.php:                            {{ html()->form->open(['id'=>'updatePayments','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/payments/edit.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/category/create.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/category/create.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/category/edit.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/category/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/lockers/edit.blade.php:                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/lockers/edit.blade.php:                                {{ html()->form->close() !!}
+resources/views/gym-admin/redeems/create.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/redeems/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/redeems/edit.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/redeems/edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/gymsuppliers/create.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/gymsuppliers/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/gymsuppliers/edit.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/gymsuppliers/edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/faqs/create.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/faqs/create.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/faqs/edit.blade.php:                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/faqs/edit.blade.php:                        {{ html()->form->close() !!}
+resources/views/gym-admin/my-gym/edit.blade.php:                                                        {{ html()->form->open(['id'=>'myGymDetails','method'=>'post','class' => 'ajax_form']) !!}
+resources/views/gym-admin/my-gym/edit.blade.php:                                                        {{ html()->form->close() !!}
+resources/views/gym-admin/gymclients/edit.blade.php:                                                {{ html()->form->open(['id'=>'personal_details','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/gymclients/edit.blade.php:                                                {{ html()->form->close() !!}
+resources/views/gym-admin/gymclients/edit.blade.php:                                                {{ html()->form->open(['id'=>'update_image','class'=>'ajax-form','method'=>'POST']) !!}
+resources/views/gym-admin/gymclients/edit.blade.php:                                                {{ html()->form->close() !!}
+resources/views/gym-admin/target/create.blade.php:                            {{ html()->form->open(['id'=>'addTargetForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/target/create.blade.php:                            {{ html()->form->close() !!}
+resources/views/gym-admin/target/edit.blade.php:                            {{ html()->form->open(['id'=>'editTargetForm','class'=>'ajax-form']) !!}
+resources/views/gym-admin/target/edit.blade.php:                            {{ html()->form->close() !!}

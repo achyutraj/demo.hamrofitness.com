@@ -1,11 +1,11 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 
-    {!! HTML::style('admin/pages/css/invoice.min.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/pages/css/invoice.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 
     <style type="text/css" media="print">
         .no-print {
@@ -57,9 +57,9 @@
                                 <div class="row invoice-logo">
                                     <div class="col-xs-6 invoice-logo-space">
                                         @if($gymSettings->front_image != '')
-                                            {!! HTML::image(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo',array("class" => "logo-style")) !!}
+                                            {{ html()->img(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo')->attributes(array("class" => "logo-style")) }}
                                         @else
-                                            {!! HTML::image(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo',array("class" => "logo-style")) !!}
+                                            {{ html()->img(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "logo-style")) }}
                                         @endif
                                     </div>
                                     <div class="col-xs-6">
@@ -188,11 +188,11 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
 
     <script>
        function printDivArea(printAreaId){

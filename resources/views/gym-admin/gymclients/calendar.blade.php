@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/fullcalendar/fullcalendar.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/fullcalendar/fullcalendar.css") }}">
 @stop
 
 @section('content')
@@ -76,10 +76,10 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/moment.min.js') !!}
-    {!! HTML::script('admin/global/plugins/fullcalendar/fullcalendar.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-ui/jquery-ui.min.js') !!}
-    {!! HTML::script('admin/apps/scripts/calendar.js') !!}
+    <script src="{{ asset("admin/global/plugins/moment.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/fullcalendar/fullcalendar.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-ui/jquery-ui.min.js") }}"></script>
+    <script src="{{ asset("admin/apps/scripts/calendar.js") }}"></script>
 
     <script>
 

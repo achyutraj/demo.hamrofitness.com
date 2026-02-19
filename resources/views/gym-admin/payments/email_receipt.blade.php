@@ -32,7 +32,7 @@
                                             <td valign="middle" align="center"
                                                 style="padding:30px 0;text-align:center;background-color:white;border-collapse:collapse">
 
-                                                {!! HTML::image('admin/admin/layout4/img/hp-logo-black-big-2.png', 'Logo',array("style" => "margin:auto;text-align:center;border:0;outline:none;text-decoration:none", "align" => "center",'border' => '0','width' => '240')) !!}
+                                                {{ html()->img('admin/admin/layout4/img/hp-logo-black-big-2.png', 'Logo')->attributes(array("style" => "margin:auto;text-align:center;border:0;outline:none;text-decoration:none", "align" => "center",'border' => '0','width' => '240')) }}
 
                                             </td>
 

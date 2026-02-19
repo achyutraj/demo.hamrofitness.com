@@ -5,9 +5,9 @@
 @endsection
 
 @section('before_css')
-    {!! HTML::style("admin/global/plugins/bootstrap/css/bootstrap.css") !!}
-    {!! HTML::style('admin/global/css/components-md.min.css',array('id'=>'style_components')) !!}
-    {!! HTML::style('admin/global/css/plugins-md.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap/css/bootstrap.css") }}">
+    {{ HTML::style('admin/global/css/components-md.min.css',array('id'=>'style_components')) }}
+    <link rel="stylesheet" href="{{ asset("admin/global/css/plugins-md.min.css") }}">
 @endsection
 
 @section('content')
@@ -312,6 +312,6 @@
 @endsection
 
 @section('JS')
-    {!! HTML::script("admin/global/plugins/jquery.min.js") !!}
-    {!! HTML::script("admin/global/plugins/bootstrap/js/bootstrap.min.js") !!}
+    <script src="{{ asset("admin/global/plugins/jquery.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
 @endsection

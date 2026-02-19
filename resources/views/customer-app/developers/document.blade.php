@@ -99,12 +99,12 @@
 @endsection
 
 @section('JS')
-    {!! HTML::script('fitsigma_customer/bower_components/jquery/dist/jquery.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap/js/bootstrap.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery.blockui.min.js') !!}
-    {!! HTML::script('admin/admin/layout3/scripts/layout.min.js') !!}
-    {!! HTML::script("admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") !!}
-    {!! HTML::script('fitsigma_customer/bower_components/counterup/jquery.counterup.min.js') !!}
-    {!! HTML::script('fitsigma_customer/js/custom.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/jquery/dist/jquery.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery.blockui.min.js") }}"></script>
+    <script src="{{ asset("admin/admin/layout3/scripts/layout.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/counterup/jquery.counterup.min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/js/custom.min.js") }}"></script>
 
 @endsection

@@ -15,13 +15,13 @@
 
     <link href="{{ asset('fonts/stylesheet.css') }}" rel="stylesheet">
 
-{!! HTML::style('admin/global/plugins/font-awesome/css/font-awesome.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/font-awesome/css/font-awesome.min.css") }}">
 
-{!! HTML::style('admin/global/plugins/bootstrap/css/bootstrap.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap/css/bootstrap.min.css") }}">
 
-{!! HTML::style('admin/global/css/components-md.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/css/components-md.min.css") }}">
 
-{!! HTML::style('admin/pages/css/auth.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/pages/css/auth.css") }}">
 
     @yield('CSS')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,20 +36,20 @@
 
     @yield('content')
     <!-- jQuery -->
-        {!! HTML::script('admin/global/plugins/respond.min.js') !!}
-        {!! HTML::script('admin/global/plugins/excanvas.min.js') !!}
+        <script src="{{ asset("admin/global/plugins/respond.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/excanvas.min.js") }}"></script>
         <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
-        {!! HTML::script('admin/global/plugins/jquery.min.js') !!}
-        {!! HTML::script('admin/global/plugins/bootstrap/js/bootstrap.min.js') !!}
-        {!! HTML::script('admin/global/plugins/js.cookie.min.js') !!}
-        {!! HTML::script('admin/global/plugins/jquery.blockui.min.js') !!}
-        {!! HTML::script('admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') !!}
+        <script src="{{ asset("admin/global/plugins/jquery.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/js.cookie.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/jquery.blockui.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js") }}"></script>
     <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        {!! HTML::script('admin/global/plugins/jquery-validation/js/jquery.validate.min.js') !!}
-        {!! HTML::script('admin/global/plugins/jquery-validation/js/additional-methods.min.js') !!}
-        {!! HTML::script('admin/global/plugins/backstretch/jquery.backstretch.min.js') !!}
+        <script src="{{ asset("admin/global/plugins/jquery-validation/js/jquery.validate.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/jquery-validation/js/additional-methods.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/backstretch/jquery.backstretch.min.js") }}"></script>
     <!-- END PAGE LEVEL PLUGINS -->
 
 

@@ -27,38 +27,43 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-{!! HTML::style("admin/global/plugins/font-awesome/css/font-awesome.min.css") !!}
-{!! HTML::style("admin/global/css/font-awesome-animation.min.css") !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/font-awesome/css/font-awesome.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/css/font-awesome-animation.min.css") }}">
 
-{!! HTML::style("admin/global/plugins/simple-line-icons/simple-line-icons.min.css") !!}
-{!! HTML::style("admin/global/plugins/bootstrap/css/bootstrap.css") !!}
-{!! HTML::style("admin/global/plugins/uniform/css/uniform.default.css") !!}
-{!! HTML::style("admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css") !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/simple-line-icons/simple-line-icons.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap/css/bootstrap.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/uniform/css/uniform.default.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css") }}">
 <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-{!! HTML::style('admin/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css") }}">
 <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-{!! HTML::style('admin/global/css/components-md.min.css',array('id'=>'style_components')) !!}
-{!! HTML::style('admin/global/css/plugins-md.min.css') !!}
-{!! HTML::style('admin/global/css/md-loader.css') !!}
-{!! HTML::style('admin/global/plugins/select2/select2.min.css') !!}
+    {{-- @vite('admin/global/css/components-md.min.css') --}}
+
+<link rel="stylesheet" href="{{ asset("admin/global/css/components-md.min.css") }}">
+
+
+{{-- {{ HTML::style('admin/global/css/components-md.min.css',array('id'=>'style_components')) }} --}}
+<link rel="stylesheet" href="{{ asset("admin/global/css/plugins-md.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/css/md-loader.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/select2/select2.min.css") }}">
 <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
-{!! HTML::style('admin/admin/layout3/css/layout.css') !!}
-{!! HTML::style('admin/global/plugins/froiden-helper/helper.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-toastr/toastr.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/admin/layout3/css/layout.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/froiden-helper/helper.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-toastr/toastr.min.css") }}">
 
-{!! HTML::style('fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.css") }}">
 <!-- animation CSS -->
-{!! HTML::style('fitsigma_customer/css/animate.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/css/animate.css") }}">
 <!-- Custom CSS -->
-{!! HTML::style('fitsigma_customer/css/style.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/css/style.css") }}">
 <!-- color CSS -->
-{!! HTML::style('fitsigma_customer/css/colors/megna.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/css/colors/megna.css") }}">
 <!--helper CSS-->
-    {!! HTML::style('admin/global/plugins/froiden-helper/helper.css') !!}
-    {!! HTML::style('fitsigma_customer/css/custom.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/froiden-helper/helper.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/css/custom.css") }}">
     <style>
         .sidebar #side-menu .user-pro {
             background: url({{ asset('fitsigma_customer/images/profile-menu.png') }}) center center/cover no-repeat;
@@ -86,7 +91,7 @@
     </style>
 
     @yield('CSS')
-    {!! HTML::style('admin/admin/layout3/css/custom.css?v=1.6') !!}
+    <link rel="stylesheet" href="{{ asset("admin/admin/layout3/css/custom.css?v=1.6") }}">
     <!-- END THEME LAYOUT STYLES -->
 </head>
 

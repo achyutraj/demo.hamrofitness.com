@@ -16,12 +16,12 @@
     <div class="login-box">
         <div class="login-logo">
             @if(is_null($gymSettings))
-                {!! HTML::image(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness',['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) !!}
+                {{ html()->img(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness')->attributes(['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) }}
             @else
                 @if($gymSettings->image != '')
-                    {!! HTML::image($gymSettingPath.$gymSettings->image, 'Hamrofitness',array('class' => 'img-responsive inline-block', 'style' => 'height: 60px;')) !!}
+                    {{ html()->img($gymSettingPath.$gymSettings->image, 'Hamrofitness')->attributes(array('class' => 'img-responsive inline-block', 'style' => 'height: 60px;')) }}
                 @else
-                    {!! HTML::image(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness',['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) !!}
+                    {{ html()->img(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness')->attributes(['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) }}
                 @endif
             @endif
 
@@ -29,7 +29,7 @@
         </div>
         <div class="login-box-body">
             <p class="login-box-msg">Sign In</p>
-            {!! Form::open(array('route' => ['merchant.login.store'], 'method' => 'POST', "id" => "login-form", "class" => 'login-form')) !!}
+            {{ html()->form()->open(array('route' => ['merchant.login.store'], 'method' => 'POST', "id" => "login-form", "class" => 'login-form')) }}
             <div class="row">
                 <div class="col-xs-12">
                     <div class="alert alert-danger display-hide" id="error-message">
@@ -63,7 +63,7 @@
                     <button class="btn blue btn-block" type="submit">Sign In</button>
                 </div>
             </div>
-            {!! Form::close() !!}
+            {{ html()->form()->close() }}
 
         </div>
     </div>

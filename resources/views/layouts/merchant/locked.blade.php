@@ -10,19 +10,19 @@
     <meta content="" name="author"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-{!! HTML::style('admin/global/plugins/font-awesome/css/font-awesome.min.css') !!}
-{!! HTML::style('admin/global/plugins/simple-line-icons/simple-line-icons.min.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap/css/bootstrap.min.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/font-awesome/css/font-awesome.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/simple-line-icons/simple-line-icons.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap/css/bootstrap.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css") }}">
 <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-{!! HTML::style('admin/global/css/components-md.min.css') !!}
-{!! HTML::style('admin/global/css/plugins-md.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/css/components-md.min.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/css/plugins-md.min.css") }}">
 <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN PAGE LEVEL STYLES -->
-{!! HTML::style('admin/pages/css/lock-2.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/pages/css/lock-2.min.css") }}">
 <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <!-- END THEME LAYOUT STYLES -->
@@ -41,23 +41,23 @@
 <body>
 @yield('content')
 <!--[if lt IE 9]>
-{!! HTML::script('admin/global/plugins/respond.min.js') !!}
-{!! HTML::script('admin/global/plugins/excanvas.min.js') !!}
+<script src="{{ asset("admin/global/plugins/respond.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/excanvas.min.js") }}"></script>
 <![endif]-->
 <!-- BEGIN CORE PLUGINS -->
-{!! HTML::script('admin/global/plugins/jquery.min.js') !!}
-{!! HTML::script('admin/global/plugins/bootstrap/js/bootstrap.min.js') !!}
-{!! HTML::script('admin/global/plugins/js.cookie.min.js') !!}
-{!! HTML::script('admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') !!}
-{!! HTML::script('admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') !!}
-{!! HTML::script('admin/global/plugins/jquery.blockui.min.js') !!}
-{!! HTML::script('admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') !!}
+<script src="{{ asset("admin/global/plugins/jquery.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/js.cookie.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/jquery.blockui.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js") }}"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-{!! HTML::script('admin/global/plugins/backstretch/jquery.backstretch.min.js') !!}
+<script src="{{ asset("admin/global/plugins/backstretch/jquery.backstretch.min.js") }}"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-{!! HTML::script('admin/global/scripts/app.js') !!}
+<script src="{{ asset("admin/global/scripts/app.js") }}"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <!-- END PAGE LEVEL SCRIPTS -->

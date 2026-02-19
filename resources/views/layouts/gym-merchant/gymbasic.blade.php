@@ -135,53 +135,53 @@
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
-{!! HTML::script("admin/global/plugins/respond.min.js") !!}
-{!! HTML::script("admin/global/plugins/excanvas.min.js") !!}
+<script src="{{ asset("admin/global/plugins/respond.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/excanvas.min.js") }}"></script>
 <![endif]-->
-{!! HTML::script("admin/global/plugins/jquery.min.js") !!}
-{!! HTML::script("admin/global/plugins/jquery-migrate.min.js") !!}
+<script src="{{ asset("admin/global/plugins/jquery.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/jquery-migrate.min.js") }}"></script>
 <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-{!! HTML::script("admin/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js") !!}
-{!! HTML::script("admin/global/plugins/bootstrap/js/bootstrap.min.js") !!}
-{!! HTML::script("admin/global/plugins/js.cookie.min.js") !!}
+<script src="{{ asset("admin/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/js.cookie.min.js") }}"></script>
 
-{{--{!! HTML::script("admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") !!}--}}
+{{--<script src="{{ asset("admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") }}"></script>--}}
 
-{!! HTML::script("admin/global/plugins/jquery.blockui.min.js") !!}
-{!! HTML::script("admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js") !!}
-
-
-{!! HTML::script("admin/global/plugins/jquery-idle-timeout/jquery.idletimeout.js") !!}
-{!! HTML::script("admin/global/plugins/jquery-idle-timeout/jquery.idletimer.js") !!}
+<script src="{{ asset("admin/global/plugins/jquery.blockui.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js") }}"></script>
 
 
-{!! HTML::script("admin/global/plugins/jquery.cokie.min.js") !!}
-{!! HTML::script("admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") !!}
-{!! HTML::script("admin/global/plugins/select2/select2.min.js") !!}
+<script src="{{ asset("admin/global/plugins/jquery-idle-timeout/jquery.idletimeout.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/jquery-idle-timeout/jquery.idletimer.js") }}"></script>
+
+
+<script src="{{ asset("admin/global/plugins/jquery.cokie.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/select2/select2.min.js") }}"></script>
 <!-- END CORE PLUGINS -->
-{!! HTML::script("admin/global/scripts/app.js") !!}
-{!! HTML::script('admin/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js') !!}
-{!! HTML::script('admin/pages/scripts/components-bootstrap-maxlength.min.js') !!}
+<script src="{{ asset("admin/global/scripts/app.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js") }}"></script>
+<script src="{{ asset("admin/pages/scripts/components-bootstrap-maxlength.min.js") }}"></script>
 
-{!! HTML::script("admin/global/scripts/metronic.js") !!}
-{!! HTML::script("admin/admin/layout3/scripts/layout.min.js") !!}
-{!! HTML::script("admin/admin/layout3/scripts/demo.js") !!}
-{!! HTML::script("admin/global/plugins/froiden-helper/helper.js?v=1.2") !!}
+<script src="{{ asset("admin/global/scripts/metronic.js") }}"></script>
+<script src="{{ asset("admin/admin/layout3/scripts/layout.min.js") }}"></script>
+<script src="{{ asset("admin/admin/layout3/scripts/demo.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/froiden-helper/helper.js?v=1.2") }}"></script>
 
 
 {{--/////////////////--}}
 <!-- Menu Plugin JavaScript -->
-{!! HTML::script('fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.js") }}"></script>
 <!--slimscroll JavaScript -->
-{!! HTML::script('fitsigma_customer/js/jquery.slimscroll.js') !!}
+<script src="{{ asset("fitsigma_customer/js/jquery.slimscroll.js") }}"></script>
 <!--Wave Effects -->
-{!! HTML::script('fitsigma_customer/js/waves.js') !!}
+<script src="{{ asset("fitsigma_customer/js/waves.js") }}"></script>
 <!--Counter js -->
-{!! HTML::script('fitsigma_customer/bower_components/waypoints/lib/jquery.waypoints.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/counterup/jquery.counterup.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bower_components/waypoints/lib/jquery.waypoints.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/counterup/jquery.counterup.min.js") }}"></script>
 
 <!-- Custom Theme JavaScript -->
-{!! HTML::script('fitsigma_customer/js/custom.min.js') !!}
+<script src="{{ asset("fitsigma_customer/js/custom.min.js") }}"></script>
 
 @yield("footer")
 

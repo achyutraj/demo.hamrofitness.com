@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body">
     <div class="portlet-body">
-        {!! Form::open(['route'=>'gym-admin.emails.store','id'=>'composeMailForm','class'=>'ajax-form form-material','method'=>'POST']) !!}
+        {{ html()->form()->open(['route'=>'gym-admin.emails.store','id'=>'composeMailForm','class'=>'ajax-form form-material','method'=>'POST']) }}
         <div class="form-group">
             <label for="customer_id">Choose Member</label>
             <select class="form-control select2" name="customer_id" id="customer_id" required>
@@ -34,7 +34,7 @@
             <div class="form-control-focus"></div>
         </div>
 
-        {!! Form::close() !!}
+        {{ html()->form()->close() }}
     </div>
 </div>
 <div class="modal-footer">

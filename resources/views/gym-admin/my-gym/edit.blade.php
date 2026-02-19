@@ -1,11 +1,11 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
-    {!! HTML::style('admin/global/plugins/dropzone/dropzone.min.css') !!}
-    {!! HTML::style('admin/global/plugins/dropzone/basic.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/dropzone/dropzone.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/dropzone/basic.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css") }}">
 @stop
 
 @section('content')
@@ -52,7 +52,7 @@
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row">
-                                                        {!! Form::open(['id'=>'myGymDetails','method'=>'post','class' => 'ajax_form']) !!}
+                                                        {{ html()->form()->open(['id'=>'myGymDetails','method'=>'post','class' => 'ajax_form']) }}
                                                         <div class="col-md-6">
                                                             <div class="form-body">
                                                                 <div class="form-group form-md-line-input">
@@ -118,8 +118,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        {!! Form::hidden('updateType','details') !!}
-                                                        {!! Form::close() !!}
+                                                        {{ Form::hidden('updateType','details') }}
+                                                        {{ html()->form()->close() }}
                                                     </div>
                                                     <div class="row">
                                                         <div class=" col-md-offset-5 col-md-2">
@@ -144,13 +144,13 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=@if(!is_null($gymSettings->maps_api_key) && $gymSettings->maps_api_key != '') {{ $gymSettings->maps_api_key }} @endif&libraries=places"></script>
-    {{--{!! HTML::script('admin/global/plugins/gmaps/gmaps.min.js')  !!}--}}
-    {!! HTML::script('admin/global/plugins/dropzone/dropzone.min.js')  !!}
-    {!! HTML::script('admin/pages/scripts/form-dropzone.min.js')  !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') !!}
+    {{--<script src="{{ asset("admin/global/plugins/gmaps/gmaps.min.js") }}"></script>--}}
+    <script src="{{ asset("admin/global/plugins/dropzone/dropzone.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/form-dropzone.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js") }}"></script>
     <script>
         //Get Latitude And Longitude
         var geocoder = new google.maps.Geocoder();

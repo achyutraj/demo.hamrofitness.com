@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 
 @stop
 
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="portlet-body form">
-                            <!-- {!! Form::open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) !!} -->
+                            <!-- {{ html()->form()->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) }} -->
                             <form action="{{route('gym-admin.assignPermissionEmploy', $role->id)}}" class="form-horizontal form-bordered form-row-stripped" method="post" enctype="multipart/form-data" >
                             {{csrf_field()}}
                             <div class="col-xs-12 bg-grey-steel bg-font-grey-steel">
@@ -112,8 +112,8 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
 
     <script>
 

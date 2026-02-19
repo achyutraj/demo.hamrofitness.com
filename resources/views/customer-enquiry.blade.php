@@ -4,8 +4,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 <style>
     body{
         font-family: 'Poppins', sans-serif;
@@ -26,7 +26,7 @@
                 @if(!empty($logo))
                 <a href="#">
                     <img src="">
-                    {!! HTML::image(asset('/uploads/gym_setting/master/').'/'.$logo, 'Hamrofitness',['class' => 'img-responsive', 'style' => 'height: 100px;']) !!}
+                    {{ html()->img(asset('/uploads/gym_setting/master/').'/'.$logo, 'Hamrofitness')->attributes(['class' => 'img-responsive', 'style' => 'height: 100px;']) }}
                 </a>
                 @endif
             </div>
@@ -53,7 +53,7 @@
                             @if(session()->has('success'))
                             <div class="alert alert-success">
                                 <ul class="list" style="list-style-type: none">
-                                    <li class="item">{!! session('success') !!}</li>
+                                    <li class="item">{{ session('success') }}</li>
                                 </ul>
                             </div>
                             @endif
@@ -171,8 +171,8 @@
 @stop
 
 @section('js')
-{!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 
     <script>
 

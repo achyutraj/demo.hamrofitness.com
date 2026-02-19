@@ -11,7 +11,7 @@
     $myData = env('APP_URL').'/enquiry-form/'.$common_details->slug;
     ?>
     <div>
-        <img class="center" src="data:image/png;base64, {!! base64_encode(\SimpleSoftwareIO\QrCode\Facades\QrCode::size(300)->generate($myData)) !!} ">
+        <img class="center" src="data:image/png;base64, {{ base64_encode(\SimpleSoftwareIO\QrCode\Facades\QrCode::size(300)->generate($myData)) }} ">
     </div>
    <div> 
 </div>

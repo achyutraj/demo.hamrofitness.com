@@ -37,10 +37,10 @@
         // Build a system
         const ui = SwaggerUIBundle({
             dom_id: '#swagger-ui',
-            url: "{!! $urlToDocs !!}",
-            operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
-            configUrl: {!! isset($configUrl) ? '"' . $configUrl . '"' : 'null' !!},
-            validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
+            url: "{{ $urlToDocs }}",
+            operationsSorter: {{ isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' }},
+            configUrl: {{ isset($configUrl) ? '"' . $configUrl . '"' : 'null' }},
+            validatorUrl: {{ isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' }},
             oauth2RedirectUrl: "{{ route('l5-swagger.'.$documentation.'.oauth2_callback', [], $useAbsolutePath) }}",
 
             requestInterceptor: function(request) {
@@ -58,10 +58,10 @@
             ],
 
             layout: "StandaloneLayout",
-            docExpansion : "{!! config('l5-swagger.defaults.ui.display.doc_expansion', 'none') !!}",
+            docExpansion : "{{ config('l5-swagger.defaults.ui.display.doc_expansion', 'none') }}",
             deepLinking: true,
-            filter: {!! config('l5-swagger.defaults.ui.display.filter') ? 'true' : 'false' !!},
-            persistAuthorization: "{!! config('l5-swagger.defaults.ui.authorization.persist_authorization') ? 'true' : 'false' !!}",
+            filter: {{ config('l5-swagger.defaults.ui.display.filter') ? 'true' : 'false' }},
+            persistAuthorization: "{{ config('l5-swagger.defaults.ui.authorization.persist_authorization') ? 'true' : 'false' }}",
 
         })
 
@@ -69,7 +69,7 @@
 
         @if(in_array('oauth2', array_column(config('l5-swagger.defaults.securityDefinitions.securitySchemes'), 'type')))
         ui.initOAuth({
-            usePkceWithAuthorizationCodeGrant: "{!! (bool)config('l5-swagger.defaults.ui.authorization.oauth2.use_pkce_with_authorization_code_grant') !!}"
+            usePkceWithAuthorizationCodeGrant: "{{ (bool)config('l5-swagger.defaults.ui.authorization.oauth2.use_pkce_with_authorization_code_grant') }}"
         })
         @endif
     }

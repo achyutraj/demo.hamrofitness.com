@@ -32,7 +32,7 @@
                                         </div>
                                     </div>
                                     <div class="portlet-body">
-                                        {!! Form::open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+                                        {{ html()->form()->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) }}
                                             <div class="form-group">
                                                 <label>Product Name</label>
                                                 <input type="text" class="form-control" value="{{ $product->name }}" readonly>
@@ -64,7 +64,7 @@
                                                 <span class="ladda-spinner"></span>
                                                 <div class="ladda-progress" style="width: 0px;"></div>
                                             </button>
-                                        {!! Form::close() !!}
+                                        {{ html()->form()->close() }}
                                     </div>
                                 </div>
                             </div>
@@ -123,11 +123,11 @@
 @endsection
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/jquery.validate.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/additional-methods.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/jquery.validate.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/additional-methods.min.js") }}"></script>
 
     <script>
         var FormValidationMd = function() {

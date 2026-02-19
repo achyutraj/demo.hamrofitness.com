@@ -5,9 +5,9 @@
             <a class="logo" href="{{ route('gym-admin.dashboard.index') }}">
                 <span class="hidden-xs">
                     @if($gymSettings->front_image != '')
-                        {!! HTML::image(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo',array("class" => "logo-style")) !!}
+                        {{ html()->img(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo')->attributes(array("class" => "logo-style")) }}
                     @else
-                        {!! HTML::image(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo',array("class" => "logo-style")) !!}
+                        {{ html()->img(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "logo-style")) }}
                     @endif
                 </span>
             </a>
@@ -182,7 +182,7 @@
                                     <div class="user-img"><img src="{{asset('/fitsigma/images/').'/'.'user.svg'}}" alt="user" class="img-circle"> <span
                                                 class="profile-status online pull-right"></span></div>
                                     <div class="mail-contnet">
-                                        <h5>{!! $notification['notification_type'] !!}</h5>
+                                        <h5>{{ $notification['notification_type'] }}</h5>
                                         <span class="mail-desc">{{ $notification['title'] }}</span></div>
                                 </a>
                             @endforeach

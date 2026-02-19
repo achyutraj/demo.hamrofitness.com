@@ -4,9 +4,9 @@
             <div class="media-left">
                     @if($comment->client)
                         @if($comment->client->profile_image != "")
-                            {!! HTML::image($profilePath.$comment->client->profile_image) !!}
+                            {{ HTML::image($profilePath.$comment->client->profile_image) }}
                         @else
-                            {!! HTML::image($profilePath.'user.png') !!}
+                            {{ HTML::image($profilePath.'user.png') }}
                         @endif
                     @endif
             </div>
@@ -19,7 +19,7 @@
                     @endif
 
                     <span class="c-date">{{ $comment->created_at->diffForHumans() }}</span>
-                </h4> {!! nl2br($comment->comment) !!}</br>
+                </h4> {{ nl2br($comment->comment) }}</br>
                 <a href="javascript:;" class="btn btn-sm btn-success" onclick="showEdit('{{$comment->comment}}',{{$comment->id}})">  Edit</a>
                 <a href="javascript:;" class="btn btn-sm btn-danger" onClick="deleteModal({{$comment->id}})">  Remove</a>
                 <div id="replyEdit_{{$comment->id}}" style="display: none;margin-bottom: 15px;">

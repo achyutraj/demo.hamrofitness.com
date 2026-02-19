@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-daterangepicker/daterangepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-daterangepicker/daterangepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
 @stop
 
 @section('content')
@@ -39,7 +39,7 @@
                 <div class="portlet-body">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-5">
-                            {!! Form::open(['id'=>'createBankReport','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'createBankReport','class'=>'ajax-form']) }}
                             <div class="form-body">
                                 <div class="form-group">
                                     <div id="reportrange" class="btn default">
@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                         <div class="col-md-4" id="easyStats" style="display: none;margin-top: 50px;margin-left: 20px">
                             <div class="widget-thumb widget-bg-color-dark-light text-uppercase margin-bottom-20 ">
@@ -130,18 +130,18 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-daterangepicker/moment.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-daterangepicker/daterangepicker.js') !!}
-    {!! HTML::script('admin/global/plugins/counterup/jquery.counterup.js') !!}
-    {!! HTML::script('admin/global/plugins/counterup/jquery.waypoints.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-daterangepicker/moment.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-daterangepicker/daterangepicker.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.counterup.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.waypoints.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
 
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
     <script>
         $('#reportrange').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),

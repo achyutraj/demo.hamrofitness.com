@@ -37,8 +37,8 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {!! Form::open(['route'=>'gym-admin.setting.storeMailCredentials','id'=>'mailCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files'
-                    => true]) !!}
+                    {{ html()->form()->open(['route'=>'gym-admin.setting.storeMailCredentials','id'=>'mailCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST','files'
+                    => true]) }}
                     <div class="form-body col-md-6 col-md-offset-1">
                         <div class="form-group form-md-line-input">
                             <label class="control-label" for="form_control_1">Email Status</label>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    {!! Form::close() !!}
+                    {{ html()->form()->close() }}
                 </div>
             </div>
         </div>

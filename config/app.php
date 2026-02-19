@@ -178,7 +178,8 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         //additional package
         Jenssegers\Agent\AgentServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
+        // Collective\Html\HtmlServiceProvider::class,
+        Spatie\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
@@ -187,7 +188,6 @@ return [
         //PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Milon\Barcode\BarcodeServiceProvider::class,
     ],
 
     /*
@@ -242,8 +242,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        'Form' => Collective\Html\FormFacade::class,
-        'HTML' => Collective\Html\HtmlFacade::class,
+        // 'Form' => Collective\Html\FormFacade::class,
+        // 'HTML' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,

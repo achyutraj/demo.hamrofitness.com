@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
     <style>
         .font-grey-cascade{
             color: #000000 !important;
@@ -58,7 +58,7 @@
                                             </div>
                                         </div>
                                         <div class="timeline-body-content">
-                                                            <span class="font-grey-cascade"> {!!  $info->details !!}
+                                                            <span class="font-grey-cascade"> {{ $info->details }}
                                                             </span>
                                         </div>
                                     </div>
@@ -78,5 +78,5 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
 @stop

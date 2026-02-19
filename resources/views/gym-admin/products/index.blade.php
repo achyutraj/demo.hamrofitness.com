@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 
     <style>
         #manage-branches_wrapper {
@@ -126,7 +126,7 @@
                                                          id="deleteProduct{{$product->uuid}}" role="dialog"
                                                          aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog modal-md" id="modal-data-application">
-                                                            {!! Form::open(['route' => ['gym-admin.products.destroy', $product->uuid], 'class' => 'delete', 'method' => 'DELETE']) !!}
+                                                            {{ html()->form()->open(['route' => ['gym-admin.products.destroy', $product->uuid], 'class' => 'delete', 'method' => 'DELETE']) }}
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
@@ -144,7 +144,7 @@
                                                                     <button type="button" data-dismiss="modal" class="btn">Cancel</button>
                                                                 </div>
                                                             </div>
-                                                            {!! Form::close() !!}
+                                                            {{ html()->form()->close() }}
 
                                                         </div>
                                                     </div>
@@ -165,13 +165,13 @@
     </div>
 @endsection
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
 
     <script>
         var table = $('#manage-branches');

@@ -5,8 +5,8 @@
 @endsection
 
 @section('CSS')
-    {!! HTML::style('fitsigma_customer/bower_components/morrisjs/morris.css') !!}
-    {!! HTML::style('fitsigma_customer/bower_components/datatables/jquery.dataTables.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/morrisjs/morris.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/datatables/jquery.dataTables.min.css") }}">
 
 @endsection
 
@@ -435,7 +435,7 @@
                                 <tr>
                                     <td>{{$schedule->classes->class_name ?? ''}}</td>
                                     <td>{{$schedule->trainers->name ?? ''}}</td>
-                                    <td>@for($i=0;$i<$j;$i++){{$arr[$i]}}{!! '<br>' !!}  @endfor</td>
+                                    <td>@for($i=0;$i<$j;$i++){{$arr[$i]}}{{ '<br>' }}  @endfor</td>
                                     <td>{{$sTime->format('h:i a')}}</td>
                                     <td>{{$eTime->format('h:i a')}}</td>
                                 </tr>
@@ -533,7 +533,7 @@
                             <tr>
                                 <td>{{$schedule->classes->class_name ?? ''}}</td>
                                 <td>{{$schedule->trainers->name ?? ''}}</td>
-                                <td>@for($i=0;$i<$j;$i++){{$arr[$i]}}{!! '<br>' !!}  @endfor</td>
+                                <td>@for($i=0;$i<$j;$i++){{$arr[$i]}}{{ '<br>' }}  @endfor</td>
                                 <td>{{$sTime->format('h:i a')}}</td>
                                 <td>{{$eTime->format('h:i a')}}</td>
                             </tr>
@@ -557,9 +557,9 @@
 @endsection
 
 @section('JS')
-    {!! HTML::script('fitsigma_customer/bower_components/raphael/raphael-min.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/morrisjs/morris.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/raphael/raphael-min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/morrisjs/morris.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js") }}"></script>
 
     <script>
         var months = [];

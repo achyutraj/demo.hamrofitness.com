@@ -1,12 +1,12 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-summernote/summernote.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-summernote/summernote.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 
     <style>
         .email-template-list {
@@ -168,7 +168,7 @@
                                             <label for="summernote_1">Email Content</label>
 
                                             <div class="form-group form-md-line-input">
-                                                <div name="summernote" id="summernote_1">{!! $campaignDetail->email_content !!}</div>
+                                                <div name="summernote" id="summernote_1">{{ $campaignDetail->email_content }}</div>
 
                                             </div>
                                         </div>
@@ -204,7 +204,7 @@
                                     </div>
                                 </div>
 
-                                {!! Form::open(['id'=>'sendPromotionForm','class'=>'ajax-form']) !!}
+                                {{ html()->form()->open(['id'=>'sendPromotionForm','class'=>'ajax-form']) }}
 
                                 <div class="row">
                                     <div class="col-md-8">
@@ -248,7 +248,7 @@
                                         </table>                                        <!-- END EXAMPLE TABLE PORTLET-->
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                {{ html()->form()->close() }}
 
                                 <hr>
                                 <div class="row">
@@ -326,14 +326,14 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-summernote/summernote.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-summernote/summernote.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
     <script>
 
         var campaignName = $('#campaign_name');

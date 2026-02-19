@@ -34,19 +34,19 @@
 
     @yield('before_css')
     <!-- Bootstrap Core CSS -->
-    {!! HTML::style('fitsigma_customer/bootstrap/dist/css/bootstrap.min.css') !!}
-    {!! HTML::style('fitsigma_customer/bower_components/bootstrap-extension/css/bootstrap-extension.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bootstrap/dist/css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/bootstrap-extension/css/bootstrap-extension.css") }}">
     <!-- Menu CSS -->
-    {!! HTML::style('fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.css") }}">
     <!-- animation CSS -->
-    {!! HTML::style('fitsigma_customer/css/animate.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/css/animate.css") }}">
     <!-- Custom CSS -->
-    {!! HTML::style('fitsigma_customer/css/style.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/css/style.css") }}">
     <!-- color CSS -->
-    {!! HTML::style('fitsigma_customer/css/colors/megna.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/css/colors/megna.css") }}">
     <!--helper CSS-->
-    {!! HTML::style('admin/global/plugins/froiden-helper/helper.css') !!}
-    {!! HTML::style('fitsigma_customer/css/custom.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/froiden-helper/helper.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/css/custom.css") }}">
     <style>
         .sidebar #side-menu .user-pro {
             background: url({{ asset('fitsigma_customer/images/profile-menu.png') }}) center center/cover no-repeat;
@@ -138,7 +138,7 @@
                 // Generate encrypted check in url
                 $myData = auth('customer')->user();
                 ?>
-                {!! \SimpleSoftwareIO\QrCode\Facades\QrCode::size(150)->generate($myData->subscriptionData()) !!}
+                {{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(150)->generate($myData->subscriptionData()) }}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default waves-effect text-left" data-dismiss="modal">Close</button>
@@ -153,28 +153,28 @@
 <!-- /#wrapper -->
 @yield('before_js')
 <!-- jQuery -->
-{!! HTML::script('fitsigma_customer/bower_components/jquery/dist/jquery.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bower_components/jquery/dist/jquery.min.js") }}"></script>
 <!-- Bootstrap Core JavaScript -->
-{!! HTML::script('fitsigma_customer/bootstrap/dist/js/tether.min.js') !!}
-{!! HTML::script('fitsigma_customer/bootstrap/dist/js/bootstrap.min.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/bootstrap-extension/js/bootstrap-extension.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bootstrap/dist/js/tether.min.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/bootstrap-extension/js/bootstrap-extension.min.js") }}"></script>
 <!-- Menu Plugin JavaScript -->
-{!! HTML::script('fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bower_components/sidebar-nav/dist/sidebar-nav.min.js") }}"></script>
 <!--slimscroll JavaScript -->
-{!! HTML::script('fitsigma_customer/js/jquery.slimscroll.js') !!}
+<script src="{{ asset("fitsigma_customer/js/jquery.slimscroll.js") }}"></script>
 <!--Wave Effects -->
-{!! HTML::script('fitsigma_customer/js/waves.js') !!}
+<script src="{{ asset("fitsigma_customer/js/waves.js") }}"></script>
 <!--Counter js -->
-{!! HTML::script('fitsigma_customer/bower_components/waypoints/lib/jquery.waypoints.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/counterup/jquery.counterup.min.js') !!}
+<script src="{{ asset("fitsigma_customer/bower_components/waypoints/lib/jquery.waypoints.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/counterup/jquery.counterup.min.js") }}"></script>
 
 <!-- Custom Theme JavaScript -->
-{!! HTML::script('fitsigma_customer/js/custom.min.js') !!}
+<script src="{{ asset("fitsigma_customer/js/custom.min.js") }}"></script>
 
 <!-- Sparkline chart JavaScript -->
 
 <!--Helper Script-->
-{!! HTML::script("admin/global/plugins/froiden-helper/helper.js") !!}
+<script src="{{ asset("admin/global/plugins/froiden-helper/helper.js") }}"></script>
 @yield('JS')
 <script>
     $.ajaxSetup({

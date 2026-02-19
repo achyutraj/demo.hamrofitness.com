@@ -86,8 +86,8 @@
 @endsection
 @section('footer')
 <script href="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-{!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js') !!}
+<script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js") }}"></script>
 <script>
     $(document).ready(function () {
         $('#paymentTable').DataTable();

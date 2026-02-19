@@ -105,9 +105,14 @@ class LockerReservation extends Model
         'purchase_amount' => 'integer',
         'discount' => 'integer',
         'paid_amount' => 'integer',
+        'purchase_date' => 'datetime',
+        'start_date' => 'datetime',
+        'next_payment_date' => 'datetime',
+        'end_date' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 
-    protected $dates = ['purchase_date', 'next_payment_date', 'start_date', 'end_date','deleted_at'];
+    // protected $dates = ['purchase_date', 'next_payment_date', 'start_date', 'end_date','deleted_at'];
 
     public static function rules($action)
     {

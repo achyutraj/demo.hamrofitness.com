@@ -1,11 +1,11 @@
     @extends('layouts.gym-merchant.gymbasic')
 
     @section('CSS')
-        {!! HTML::style('admin/apps/css/todo-2.css') !!}
-        {!! HTML::style('admin/admin/layout3/css/custom.min.css') !!}
-        {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-        {!! HTML::style('admin/global/plugins/select2/select2.min.css') !!}
-        {!! HTML::style('admin/global/plugins/select2/select2-bootstrap.min.css') !!}
+        <link rel="stylesheet" href="{{ asset("admin/apps/css/todo-2.css") }}">
+        <link rel="stylesheet" href="{{ asset("admin/admin/layout3/css/custom.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("admin/global/plugins/select2/select2.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("admin/global/plugins/select2/select2-bootstrap.min.css") }}">
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <style>
             .todo-tasklist {
@@ -295,11 +295,11 @@
     @stop
 
     @section('footer')
-        {!! HTML::script('admin/apps/scripts/todo-2.min.js') !!}
-        {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-        {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-        {!! HTML::script('admin/global/plugins/bootstrap-daterangepicker/moment.min.js') !!}
-        {!! HTML::script('admin/global/plugins/select2/select2.js') !!}
+        <script src="{{ asset("admin/apps/scripts/todo-2.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+        <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+        <script src="{{ asset("admin/global/plugins/bootstrap-daterangepicker/moment.min.js") }}"></script>
+        <script src="{{ asset("admin/global/plugins/select2/select2.js") }}"></script>
         <script>
             $(document).ready(function() {
                 $('#task-status').select2({

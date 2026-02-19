@@ -1,12 +1,12 @@
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
     <span class="caption-subject font-red-sunglo bold uppercase"><i class="fa fa-plus"></i> Renew</span>
 </div>
 <div class="modal-body">
-    {!! Form::open(['id' => 'followUpForm', 'class' => 'ajax-form']) !!}
+    {{ html()->form()->open(['id' => 'followUpForm', 'class' => 'ajax-form']) }}
 
     <input type="hidden" name="detail_id" value="{{ $enquiry->id }}">
 
@@ -111,8 +111,8 @@
         <div class="modal-footer">
             <a href="javascript:;" class="btn blue" id="add-branch-renew">Save</a>
         </div>
-        {!! Form::close() !!}
+        {{ html()->form()->close() }}
     </div>
 
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">

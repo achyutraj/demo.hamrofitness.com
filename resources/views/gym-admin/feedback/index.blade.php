@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-{!! HTML::style('admin/pages/css/blog.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/pages/css/blog.min.css") }}">
 @stop
 
 @section('content')
@@ -57,16 +57,16 @@
                                             <div class="media">
                                         <div class="media-left">
                                             @if($review->client->profile_image != "")
-                                                {!! HTML::image($profilePath.$review->client->profile_image, '',array("class" => "item-pic")) !!}
+                                                {{ html()->img($profilePath.$review->client->profile_image, '')->attributes(array("class" => "item-pic")) }}
                                             @else
-                                                {!! HTML::image($profilePath.'user.svg', '',array("class" => "item-pic")) !!}
+                                                {{ html()->img($profilePath.'user.svg', '')->attributes(array("class" => "item-pic")) }}
                                             @endif
                                         </div>
                                         <div class="media-body">
                                             <h4 class="media-heading">
                                                 <a href="{{ route('gym-admin.client.show',$review->client_id) }}">{{ $review->client->fullName }}</a>
                                                 <span class="c-date">{{ $review->created_at->diffForHumans() }}</span>
-                                            </h4> {!! nl2br($review->review_text) !!}
+                                            </h4> {{ nl2br($review->review_text) }}
                                         </div>
                                     </div>
                                         </div>
@@ -152,9 +152,9 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/counterup/jquery.counterup.js') !!}
-    {!! HTML::script('admin/global/plugins/counterup/jquery.waypoints.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.counterup.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.waypoints.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
 
     <script>
         var total = 0;

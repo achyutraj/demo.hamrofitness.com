@@ -47,7 +47,15 @@ class GymPurchase extends Model
 
     protected $fillable = ['client_id','membership_id','detail_id','purchase_amount','paid_amount','discount','purchase_date','start_date','next_payment_date','is_renew','expires_on','remarks','amount_to_be_paid','payment_required','status','deleted_at','is_redeem'];
 
-    protected $dates = ['purchase_date', 'next_payment_date', 'start_date', 'expires_on','deleted_at'];
+    // protected $dates = ['purchase_date', 'next_payment_date', 'start_date', 'expires_on','deleted_at'];
+
+    protected $casts = [
+        'purchase_date'     => 'datetime',
+        'next_payment_date' => 'datetime',
+        'start_date'        => 'datetime',
+        'expires_on'        => 'datetime',
+        'deleted_at'        => 'datetime',
+    ];
 
     public function getActivitylogOptions(): LogOptions
     {

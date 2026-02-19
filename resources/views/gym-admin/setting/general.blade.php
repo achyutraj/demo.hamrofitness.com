@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {!! Form::open(['route'=>'gym-admin.setting.store','id'=>'settingUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+                    {{ html()->form()->open(['route'=>'gym-admin.setting.store','id'=>'settingUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) }}
                         <div class="form-body col-md-6 col-md-offset-1">
                             @if($user->is_admin == 1)
                             <div class="form-group form-md-line-input hidden-xs hidden-sm">
@@ -114,7 +114,7 @@
                                 <a href="javascript:;" class="btn default">Cancel</a>
                             </div>
                         </div>
-                    {!! Form::close() !!}
+                    {{ html()->form()->close() }}
                 </div>
             </div>
         </div>
@@ -122,8 +122,8 @@
 @stop
 
 @push('general-scripts')
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('js/cropper.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("js/cropper.js") }}"></script>
     <script>
         $('#settingUpdate').click(function(){
             $.easyAjax({

@@ -7,12 +7,12 @@
                 <div class="page-logo">
                     <a class="brand" href="javascript:;">
                         @if(is_null($gymSettings))
-                            {!! HTML::image(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo',array("class" => "img-responsive")) !!}
+                            {{ html()->img(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "img-responsive")) }}
                         @else
                             @if($gymSettings->front_image != '')
-                                {!! HTML::image(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo',array("class" => "img-responsive")) !!}
+                                {{ html()->img(asset('/uploads/gym_setting/master/').'/'.$gymSettings->front_image, 'Logo')->attributes(array("class" => "img-responsive")) }}
                             @else
-                                {!! HTML::image(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo',array("class" => "img-responsive")) !!}
+                                {{ html()->img(asset('/fitsigma/images').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "img-responsive")) }}
                             @endif
                         @endif
                     </a>
@@ -27,7 +27,7 @@
                         <h1>{{ $userValue->first_name }}</h1>
                         <small> {{ $userValue->email }} </small><br/>
                         <span class="locked"> Locked </span>
-                        {!! Form::open(array('route' => ['merchant.lockLogin'], 'method' => 'POST', "id" => "login-form", "class" => 'form-inline')) !!}
+                        {{ html()->form()->open(array('route' => ['merchant.lockLogin'], 'method' => 'POST', "id" => "login-form", "class" => 'form-inline')) }}
                         <div id="error-message"></div>
                         <div class="input-group input-medium">
                             <input type="password" class="form-control" placeholder="Password" name="password" id="password">
@@ -46,7 +46,7 @@
                         <div class="relogin">
                             <a href="{{ route('merchant.logout') }}"> Not {{ $userValue->first_name }} ? </a>
                         </div>
-                        {!! Form::close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
                 <small> {{ \Carbon\Carbon::now('Asia/Kathmandu')->year }} &copy; HamroFitness </small>

@@ -1,12 +1,12 @@
 <div id="mySidenav" class="sidenav">
     <div class="logo">
         @if(is_null($gymSettings))
-            {!! HTML::image(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo',array("class" => "logo-default img-responsive image-change")) !!}
+            {{ html()->img(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "logo-default img-responsive image-change")) }}
         @else
             @if($gymSettings->image != '')
-                {!! HTML::image($gymSettingPath.$gymSettings->image, 'Logo',array("class" => "logo-default img-responsive image-change", "style" => "height:51px")) !!}
+                {{ html()->img($gymSettingPath.$gymSettings->image, 'Logo')->attributes(array("class" => "logo-default img-responsive image-change", "style" => "height:51px")) }}
             @else
-                {!! HTML::image(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo',array("class" => "logo-default img-responsive image-change")) !!}
+                {{ html()->img(asset('/fitsigma/images/').'/'.'fitness-plus.png', 'Logo')->attributes(array("class" => "logo-default img-responsive image-change")) }}
             @endif
         @endif
     </div>

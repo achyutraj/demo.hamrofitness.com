@@ -337,6 +337,6 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/counterup/jquery.counterup.js') !!}
-    {!! HTML::script('admin/global/plugins/counterup/jquery.waypoints.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.counterup.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.waypoints.min.js") }}"></script>
 @stop
