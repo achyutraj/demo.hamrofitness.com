@@ -2,8 +2,8 @@
 
 @section('CSS')
 
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 @stop
 
 @section('content')
@@ -47,7 +47,7 @@
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
                             @if (isset($membership))
-                                {!! Form::open(['id' => 'form_sample_3', 'class' => 'ajax-form', 'method' => 'POST']) !!}
+                                {{ html()->form->open(['id' => 'form_sample_3', 'class' => 'ajax-form', 'method' => 'POST']) !!}
                                 <div class="form-body">
 
                                     <div class="row">
@@ -132,7 +132,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                {{ html()->form->close() !!}
                             @endif
                             <!-- END FORM-->
                         </div>
@@ -148,16 +148,16 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
 
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/jquery.validate.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/additional-methods.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/jquery.validate.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/additional-methods.min.js") }}"></script>
 
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
 
 
     <script>

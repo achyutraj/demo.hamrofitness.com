@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="_token" content="{!! csrf_token() !!}"/>
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <meta name="description" content="Sign up now and get started for free!" />
@@ -25,20 +25,20 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Bootstrap -->
-    {!! HTML::style('fitsigma/css/bootstrap.css')!!}
+    <link rel="stylesheet" href="{{ asset("fitsigma/css/bootstrap.css") }}">
             <!-- Font Awesome -->
-    {!! HTML::style('fitsigma/css/font-awesome.min.css')!!}
+    <link rel="stylesheet" href="{{ asset("fitsigma/css/font-awesome.min.css") }}">
             <!-- Stroke Gap Icons -->
-    {!! HTML::style('fitsigma/assets/stroke-gap-icons/style.css')!!}
+    <link rel="stylesheet" href="{{ asset("fitsigma/assets/stroke-gap-icons/style.css") }}">
             <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 
-    {!! HTML::style('fitsigma/css/style.css')!!}
+    <link rel="stylesheet" href="{{ asset("fitsigma/css/style.css") }}">
             <!-- Color CSS -->
     <link id="main" href="{{ asset('fitsigma/css/color_01.css') }}" rel="stylesheet">
     <link id="theme" rel="stylesheet" href="{{ asset('fitsigma/css/color_01.css') }}">
-    {!! HTML::style('admin/global/plugins/froiden-helper/helper.css') !!}
-    {!! HTML::style("admin/global/plugins/icheck/skins/all.css") !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/froiden-helper/helper.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/icheck/skins/all.css") }}">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -256,18 +256,18 @@
 </section><!-- End Section -->
 
 <!-- jQuery  -->
-{!! HTML::script('fitsigma/js/jquery.min.js')!!}
+<script src="{{ asset("fitsigma/js/jquery.min.js") }}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-{!! HTML::script('fitsigma/js/bootstrap.min.js')!!}
+<script src="{{ asset("fitsigma/js/bootstrap.min.js") }}"></script>
 
 @yield('footer')
         <!-- Custom JS -->
-{!! HTML::script('fitsigma/js/custom.js')!!}
-{!! HTML::script("admin/global/plugins/froiden-helper/helper.js") !!}
-{!! HTML::script('https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCsaV9v-birEOQ1clvo07bUWDIO_rcpk-A')  !!}
-{!! HTML::script('admin/global/plugins/gmaps/gmaps.min.js')  !!}
-{!! HTML::script('admin/global/plugins/icheck/icheck.min.js')  !!}
-{!! HTML::script("https://www.google.com/recaptcha/api.js") !!}
+<script src="{{ asset("fitsigma/js/custom.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/froiden-helper/helper.js") }}"></script>
+<script src="{{ asset("https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCsaV9v-birEOQ1clvo07bUWDIO_rcpk-A") }}"></script>
+<script src="{{ asset("admin/global/plugins/gmaps/gmaps.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/icheck/icheck.min.js") }}"></script>
+<script src="{{ asset("https://www.google.com/recaptcha/api.js") }}"></script>
 
 
 <script>

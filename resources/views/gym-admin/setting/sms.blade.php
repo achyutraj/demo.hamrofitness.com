@@ -41,7 +41,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {!! Form::open(['route'=>'gym-admin.setting.storeSmsCredentials','id'=>'smsCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+                    {{ html()->form->open(['route'=>'gym-admin.setting.storeSmsCredentials','id'=>'smsCredentialForm','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
                     <div class="form-body col-md-6 col-md-offset-1">
                         <div class="form-group form-md-line-input">
                             <label class="control-label" for="form_control_1">Status</label>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    {!! Form::close() !!}
+                    {{ html()->form->close() !!}
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css") }}">
 
 @stop
 
@@ -100,10 +100,10 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/plugins/datatables/DataTables-1.10.11/media/js/jquery.dataTables.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/DataTables-1.10.11/media/js/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/Responsive-2.0.2/js/dataTables.responsive.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/Responsive-2.0.2/js/responsive.bootstrap.js') !!}
+    <script src="{{ asset("admin/global/plugins/datatables/DataTables-1.10.11/media/js/jquery.dataTables.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/DataTables-1.10.11/media/js/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/js/dataTables.responsive.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/js/responsive.bootstrap.js") }}"></script>
 
     <script>
 

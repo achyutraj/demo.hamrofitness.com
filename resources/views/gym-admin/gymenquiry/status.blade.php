@@ -3,7 +3,7 @@
     <span class="caption-subject font-red-sunglo bold uppercase">Change Status</span>
 </div>
 <div class="modal-body">
-    {!! Form::open(['id'=>'changeStatusForm','class'=>'ajax-form']) !!}
+    {{ html()->form->open(['id'=>'changeStatusForm','class'=>'ajax-form']) !!}
     <div class="row">
         <div class="col-md-12">
 
@@ -21,7 +21,7 @@
     <div class="modal-footer">
         <a href="javascript:;" class="btn blue" id="statusChange" >Change</a>
     </div>
-    {!! Form::close() !!}
+    {{ html()->form->close() !!}
 </div>
 
 <script>

@@ -1,8 +1,8 @@
 @extends('gym-admin.setting.master-setting')
 
 @push('notification-styles')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 @endpush
 @section('settingBody')
     <div class="portlet-body">
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {!! Form::open(['id'=>'notificationStore','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+                    {{ html()->form->open(['id'=>'notificationStore','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
                     <div class="form-body">
                         <table class="table table-striped table-responsive">
                             <thead>
@@ -396,15 +396,15 @@
                             </div>
                         </div>
                     </div>
-                    {!! Form::close() !!}
+                    {{ html()->form->close() !!}
                 </div>
             </div>
         </div>
     </div>
 @stop
 @push('notification-scripts')
-  {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-  {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+  <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+  <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
   @include('gym-admin.setting.script')
   <script>
       $('#store').click(function () {

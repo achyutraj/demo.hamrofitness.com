@@ -5,7 +5,7 @@
 @endsection
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
     <style>
         .alert-dismissable .close, .alert-dismissible .close {
             top: -35px
@@ -66,11 +66,11 @@
 @endsection
 
 @section('JS')
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/global/plugins/dropzone/dropzone.min.js')  !!}
-    {!! HTML::script('admin/pages/scripts/form-dropzone.min.js')  !!}
-    {!! HTML::script('js/cropper.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/dropzone/dropzone.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/form-dropzone.min.js") }}"></script>
+    <script src="{{ asset("js/cropper.js") }}"></script>
 
     <script>
         $('.inactive').hide();

@@ -12,7 +12,7 @@
             <tbody>
             <tr>
                 <td style="vertical-align: top; padding-bottom:30px;" align="center"><a href="#" >
-                        {!!  $logo !!}
+                        {{ $logo }}
                     </a> </td>
             </tr>
             </tbody>
@@ -23,7 +23,7 @@
                 <tr>
                     <td><b>Hi  !</b>
                         <p>
-                            {!!  $emailText  !!}
+                            {{ $emailText }}
                         </p>
 
                         @if($url != NULL)

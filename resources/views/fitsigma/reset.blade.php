@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- BEGIN FORGOT PASSWORD FORM -->
-    {!! Form::open(array('route' => ['merchant.login.update-password'], 'method' => 'POST', "id" => "update-password-form", "class" => 'login-form')) !!}
+    {{ html()->form->open(array('route' => ['merchant.login.update-password'], 'method' => 'POST', "id" => "update-password-form", "class" => 'login-form')) !!}
     <h3>Reset Password Wizard</h3>
 
     <div class="alert display-hide">
@@ -32,7 +32,7 @@
         </div>
 
     </div>
-    {!! Form::close() !!}
+    {{ html()->form->close() !!}
     <!-- END FORGOT PASSWORD FORM -->
 
 @stop

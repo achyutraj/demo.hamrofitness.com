@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12 form">
             <!-- BEGIN FORM-->
-            {!! Form::open(['id'=>'form_sample_3','class'=>'ajax-form form-horizontal form-row-seperated','method'=>'POST']) !!}
+            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form form-horizontal form-row-seperated','method'=>'POST']) !!}
             <div class="form-body">
 
                 <div class="form-group form-md-line-input">
@@ -83,7 +83,7 @@
 
 
             </div>
-            {!! Form::close() !!}
+            {{ html()->form->close() !!}
                     <!-- END FORM-->
 
         </div>

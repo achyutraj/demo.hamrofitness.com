@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 @stop
 
 @section('content')
@@ -80,7 +80,7 @@
                     <div class="portlet-body">
                         <div class="row">
                             <div class="col-md-12">
-                                {!! $tutorial->iframe_code !!}
+                                {{ $tutorial->iframe_code }}
                             </div>
                         </div>
                     </div>
@@ -102,6 +102,6 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
 @stop

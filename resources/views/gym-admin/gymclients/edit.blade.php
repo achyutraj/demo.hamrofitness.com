@@ -1,14 +1,14 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('css/cropper.css')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/pages/css/profile.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
+    <link rel="stylesheet" href="{{ asset("css/cropper.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/pages/css/profile.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
     <style>
         .error-msg {
             color: red;
@@ -187,7 +187,7 @@
                                         <div class="tab-content">
                                             <!-- PERSONAL INFO TAB -->
                                             <div class="tab-pane active" id="tab_1_1">
-                                                {!! Form::open(['id'=>'personal_details','class'=>'ajax-form','method'=>'POST']) !!}
+                                                {{ html()->form->open(['id'=>'personal_details','class'=>'ajax-form','method'=>'POST']) !!}
                                                 <input type="hidden" name="id" value="{{$client->id}}">
                                                 <input type="hidden" name="type" value="general">
 
@@ -500,12 +500,12 @@
                                                         Changes </a>
                                                     <a href="{{ URL::previous()}}" class="btn default"> Cancel </a>
                                                 </div>
-                                                {!! Form::close() !!}
+                                                {{ html()->form->close() !!}
                                             </div>
                                             <!-- CHANGE AVATAR TAB -->
                                             <div class="tab-pane" id="tab_1_2">
                                                 <p> Change Image of Client </p>
-                                                {!! Form::open(['id'=>'update_image','class'=>'ajax-form','method'=>'POST']) !!}
+                                                {{ html()->form->open(['id'=>'update_image','class'=>'ajax-form','method'=>'POST']) !!}
                                                 <div class="form-group">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
@@ -537,7 +537,7 @@
 
                                                 </div>
 
-                                                {!! Form::close() !!}
+                                                {{ html()->form->close() !!}
                                             </div>
                                             <!-- Membership TAB -->
                                             <div class="tab-pane" id="tab_1_3">
@@ -684,22 +684,22 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/moment.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/pages/scripts/components-date-time-pickers.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/profile.min.js') !!}
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
-    {!! HTML::script('js/cropper.js') !!}
-    {!! HTML::script('admin/webcam/webcam.js') !!}
-    {!! HTML::script('admin/webcam/webcam.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/moment.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/pages/scripts/components-date-time-pickers.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/profile.min.js") }}"></script>
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("js/cropper.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.min.js") }}"></script>
 
     <script>
         $('#dob').change(function () {

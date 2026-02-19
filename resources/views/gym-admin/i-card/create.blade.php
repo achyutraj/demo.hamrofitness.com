@@ -29,7 +29,7 @@
                                 $url = route('gym-admin.gym-qr-check-in', [$encryptedParameter]);
                             ?>
                             <p class="i-card-user-detail">
-                            {!! \SimpleSoftwareIO\QrCode\Facades\QrCode::size(60)->generate($url) !!}
+                            {{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(60)->generate($url) }}
                             </p>
                         </div>
                     </div>

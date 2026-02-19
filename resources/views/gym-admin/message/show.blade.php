@@ -1,7 +1,7 @@
 @extends('gym-admin.message.index')
 
 @push('show-styles')
-    {!! HTML::style('fitsigma/css/merchant-chat.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma/css/merchant-chat.css") }}">
 @endpush
 
 @section('inbox')
@@ -18,7 +18,7 @@
                             <div class="chat-body">
                                 <div class="chat-text">
                                     <h4>@if($message->to == 'customer') {{ $message->merchant->first_name.' '.$message->merchant->last_name }} @else {{ $message->client->fullName }} @endif</h4>
-                                    <p> {!! nl2br($message->text) !!} </p>
+                                    <p> {{ nl2br($message->text) }} </p>
                                     <b>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $message->created_at)->diffForHumans() }}</b>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                             <div class="chat-body">
                                 <div class="chat-text">
                                     <h4>@if($message->to == 'employee') {{ $message->merchant->first_name.' '.$message->merchant->last_name }} @else {{ $message->employee->fullName }} @endif</h4>
-                                    <p> {!! nl2br($message->text) !!} </p>
+                                    <p> {{ nl2br($message->text) }} </p>
                                     <b>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $message->created_at)->diffForHumans() }}</b>
                                 </div>
                             </div>

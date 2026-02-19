@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/uniform/css/uniform.default.min.css')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')!!}
-    {!! HTML::style('admin/global/plugins/jquery-file-upload/css/jquery.fileupload.css')!!}
-    {!! HTML::style('admin/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css')!!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/uniform/css/uniform.default.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/jquery-file-upload/css/jquery.fileupload.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css") }}">
 @stop
 
 @section('content')
@@ -176,8 +176,8 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/uniform/jquery.uniform.min.js')!!}
-    {!! HTML::script('admin/global/plugins/lodash.js')!!}
+    <script src="{{ asset("admin/global/plugins/uniform/jquery.uniform.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/lodash.js") }}"></script>
     <script type="text/javascript">
 
         // Current column being edited
@@ -186,15 +186,15 @@
         //    var matchedColumnsDetailArray = [];
 
         // Fields associated with this lead
-        var jsColumnArray = $.parseJSON('{!! addslashes(json_encode($leadFields)) !!}');
+        var jsColumnArray = $.parseJSON('{{ addslashes(json_encode($leadFields)) }}');
         var currentLeadColumnID = jsColumnArray[0].id; // By default column 0 is selected
 
         // Array to store matched columns. ith element tells that Column i of the CSV matches with which field
         // of the lead. Initially each columns is matched serially with columns in the CSV
-        var jsMatchedColumnArray = $.parseJSON('{!! addslashes(json_encode($matchedColumnsDetail)) !!}');
+        var jsMatchedColumnArray = $.parseJSON('{{ addslashes(json_encode($matchedColumnsDetail)) }}');
 
         // Array to indicate which of the leads columns have been matched
-        var leadsMatchedColumns = $.parseJSON('{!! addslashes(json_encode($leadMatchedColumns)) !!}');
+        var leadsMatchedColumns = $.parseJSON('{{ addslashes(json_encode($leadMatchedColumns)) }}');
 
         $(document).ready(function() {
             // Show first column box for editing
@@ -476,7 +476,7 @@
                             window.location.href = "{{ URL::route('gym-admin.client.index') }}";
                         }
                     }).fail(function (response) {
-                $("#progressError").html("{!! addslashes(trans("messages.importFail")) !!}").show();
+                $("#progressError").html("{{ addslashes(trans("messages.importFail")) }}").show();
                 clearInterval(pingTimer);
             });
 

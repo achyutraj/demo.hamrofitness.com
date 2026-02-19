@@ -1,10 +1,10 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
 @stop
 
 @section('content')
@@ -343,18 +343,18 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
 
     <script>
         // Declare a global object to store view data.

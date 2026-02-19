@@ -1,8 +1,8 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/apps/css/inbox.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/apps/css/inbox.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css") }}">
     <style>
         .padding-bottom-select {
             padding-bottom: 60px;
@@ -89,8 +89,8 @@
 @section('footer')
     @stack('detail-scripts')
     @stack('show-scripts')
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js") }}"></script>
     <script>
 
         $('.compose-message').on('click', function() {

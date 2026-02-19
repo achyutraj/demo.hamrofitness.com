@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')!!}
-    {!! HTML::style('admin/global/plugins/jquery-file-upload/css/jquery.fileupload.css')!!}
-    {!! HTML::style('admin/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css')!!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/jquery-file-upload/css/jquery.fileupload.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css") }}">
     <style>
         .leadBox {
             min-height: 320px;
@@ -167,9 +167,9 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js')!!}
-    {!! HTML::script('admin/global/plugins/jquery-file-upload/js/jquery.iframe-transport.js')!!}
-    {!! HTML::script('admin/global/plugins/jquery-file-upload/js/jquery.fileupload.js')!!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-file-upload/js/jquery.iframe-transport.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-file-upload/js/jquery.fileupload.js") }}"></script>
     <script type="text/javascript">
         $('#fileupload').fileupload({
             dataType: 'json',

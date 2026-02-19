@@ -1,11 +1,11 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('front/js/cropper/cropper.min.css?v=1.0')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("front/js/cropper/cropper.min.css?v=1.0") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 @stop
 
 @section('content')
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
 
-                            {!! Form::open(['route'=>'gym-admin.profile.store','id'=>'clients_details','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'clients_details','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
                             @if(!is_null($client) && isset($client->id))
                                 <input type="hidden" name="client_id" value="{{ $client->id }}">
                             @endif
@@ -254,7 +254,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form->close() !!}
                         </div>
                     </div>
                 </div>
@@ -332,14 +332,14 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
-    {!! HTML::script("front/js/cropper/crop-avatar.js?v=1.0")!!}
-    {!! HTML::script("front/js/cropper/cropper.min.js?v=1.0")!!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
+    <script src="{{ asset("front/js/cropper/crop-avatar.js?v=1.0") }}"></script>
+    <script src="{{ asset("front/js/cropper/cropper.min.js?v=1.0") }}"></script>
     <script>
         $('#dob').datepicker({
             rtl: App.isRTL(),

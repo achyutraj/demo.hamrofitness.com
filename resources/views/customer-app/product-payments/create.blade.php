@@ -5,9 +5,9 @@
 @endsection
 
 @section('CSS')
-    {!! HTML::style('fitsigma_customer/bower_components/bootstrap-select/bootstrap-select.min.css') !!}
-    {!! HTML::style('fitsigma_customer/bower_components/custom-select/custom-select.css') !!}
-    {!! HTML::style('fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/bootstrap-select/bootstrap-select.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/custom-select/custom-select.css") }}">
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css") }}">
     <style>
         .text-center {
             text-align: center;
@@ -47,7 +47,7 @@
                 @endif
                 <div class="row">
                     <div class="col-md-12">
-                        {!! Form::open(['route'=>['customer-app.product-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
+                        {{ html()->form->open(['route'=>['customer-app.product-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="col-sm-6">Product Name</label>
@@ -118,7 +118,7 @@
 
                         </div>
 
-                        {!! Form::close() !!}
+                        {{ html()->form->close() !!}
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                           id="modelHeading"></span>
                 </div>
                 <div class="modal-body">
-                    <p>{!! $gymSettings->offline_text !!}</p>
+                    <p>{{ $gymSettings->offline_text }}</p>
                 </div>
                 <div class="modal-footer">
                     <a href="{{ route('customer-app.product-payments.index') }}" class="btn btn-success">Ok</a>
@@ -149,9 +149,9 @@
 
 @section('JS')
 
-    {!! HTML::script('fitsigma_customer/bower_components/bootstrap-select/bootstrap-select.min.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/custom-select/custom-select.min.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/bootstrap-select/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/custom-select/custom-select.min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js") }}"></script>
     <script>
         $('.date-picker').datepicker({
             autoclose: true,

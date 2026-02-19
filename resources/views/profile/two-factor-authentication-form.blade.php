@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="mt-4">
-                    {!! $this->user->twoFactorQrCodeSvg() !!}
+                    {{ $this->user->twoFactorQrCodeSvg() }}
                 </div>
             @endif
 

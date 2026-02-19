@@ -1,11 +1,11 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/css/responsive.dataTables.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 @stop
 
 @section('content')
@@ -44,7 +44,7 @@
                 <div class="portlet-body">
                     <div class="row">
                         <div class="col-md-5">
-                            {!! Form::open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
                             <div class="form-body">
                                 <div class="form-group form-md-line-input ">
                                     <select class="bs-select form-control targetData" data-live-search="true"
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form->close() !!}
                         </div>
                     </div>
                 </div>
@@ -86,13 +86,13 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/DataTables-1.10.11/media/js/jquery.dataTables.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/DataTables-1.10.11/media/js/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/Responsive-2.0.2/js/dataTables.responsive.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/Responsive-2.0.2/js/responsive.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/DataTables-1.10.11/media/js/jquery.dataTables.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/DataTables-1.10.11/media/js/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/js/dataTables.responsive.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/Responsive-2.0.2/js/responsive.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
     <script>
         $('#client').on('change',function(){
            var clientId = $(this).val();

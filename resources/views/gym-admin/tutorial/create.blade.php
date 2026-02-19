@@ -1,8 +1,8 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css") }}">
 @stop
 
 @section('content')
@@ -64,7 +64,7 @@
                                     </div>
 
                                     <div class="form-group form-md-line-input" id="image_upload_div" style="display: none;">
-                                        {!! Form::file('image', ['class' => 'form-control']) !!}
+                                        {{ Form::file('image', ['class' => 'form-control']) }}
                                         <label for="image">Upload Image</label>
                                     </div>
 
@@ -97,10 +97,10 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js") }}"></script>
 
     <script>
          /* Show/Hide fields based on selected type */

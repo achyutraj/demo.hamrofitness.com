@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 @stop
 
 @section('content')
@@ -68,7 +68,7 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
     <script>
         var UIBootbox = function () {
             var o = function () {

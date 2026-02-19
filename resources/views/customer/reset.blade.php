@@ -8,7 +8,7 @@
     <section id="wrapper" class="login-register">
         <div class="login-box">
             <div class="white-box">
-                {!! Form::open(array('route' => ['customer.update-password'], 'method' => 'POST', "id" => "resetform", "class" => 'ajax-form form-horizontal form-material')) !!}
+                {{ html()->form->open(array('route' => ['customer.update-password'], 'method' => 'POST', "id" => "resetform", "class" => 'ajax-form form-horizontal form-material')) !!}
                     <h3 class="box-title m-b-20">Recover Password</h3>
                     <div class="form-group ">
                         <div class="col-xs-12">
@@ -26,7 +26,7 @@
                             <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
                         </div>
                     </div>
-                {!! Form::close() !!}
+                {{ html()->form->close() !!}
             </div>
         </div>
     </section>

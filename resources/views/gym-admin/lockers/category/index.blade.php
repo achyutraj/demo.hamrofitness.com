@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
     <style>
         .edit{
             padding: 4px 10px 4px 0px !important;
@@ -137,7 +137,7 @@
                                         @if(!is_null($pkg->details))
                                         <div class="portlet-body">
                                             <div class="scroller" style="height:75px">
-                                                {!! $pkg->details !!}
+                                                {{ $pkg->details }}
                                             </div>
                                         </div>
                                         @endif
@@ -157,7 +157,7 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
     <script>
         var UIBootbox = function () {
             var o = function () {

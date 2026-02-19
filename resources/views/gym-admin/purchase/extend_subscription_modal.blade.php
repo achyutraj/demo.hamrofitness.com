@@ -9,7 +9,7 @@
                 </div>
     </div>
     <div class="portlet-body">
-        {!! Form::open(['id'=>'storeExtend','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+        {{ html()->form->open(['id'=>'storeExtend','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
         <div class="row">
             <div class="col-md-12">
                 <div class="form-body">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        {!! Form::close() !!}
+        {{ html()->form->close() !!}
     </div>
 </div>
 <hr>
@@ -90,8 +90,8 @@
     </div>
 </div>
 
-{!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 <script>
     $('.date-picker').datepicker({
         rtl: App.isRTL(),

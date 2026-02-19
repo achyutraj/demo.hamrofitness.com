@@ -832,14 +832,14 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/counterup/jquery.counterup.js') !!}
-    {!! HTML::script('admin/global/plugins/counterup/jquery.waypoints.min.js') !!}
-    {!! HTML::script('admin/global/plugins/morris/morris.min.js') !!}
-    {!! HTML::script('admin/global/plugins/amcharts/amcharts/amcharts.js') !!}
-    {!! HTML::script('admin/global/plugins/amcharts/amcharts/serial.js') !!}
-    {!! HTML::script('admin/global/plugins/amcharts/amcharts/pie.js') !!}
-    {!! HTML::script('admin/global/plugins/amcharts/amcharts/themes/light.js') !!}
-    {!! HTML::script('admin/pages/scripts/dashboard.js') !!}
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.counterup.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/counterup/jquery.waypoints.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/morris/morris.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/amcharts/amcharts/amcharts.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/amcharts/amcharts/serial.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/amcharts/amcharts/pie.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/amcharts/amcharts/themes/light.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/dashboard.js") }}"></script>
     <script>
         var months = new Array();
         months['1'] = 'Jan';

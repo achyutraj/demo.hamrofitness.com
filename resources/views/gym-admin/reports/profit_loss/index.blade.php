@@ -1,8 +1,8 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 @stop
 
 @section('content')
@@ -123,9 +123,9 @@
 @stop
 
 @section('footer')
-{!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-{!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-{!! HTML::script('admin/pages/scripts/components-date-time-pickers.min.js') !!}
+<script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+<script src="{{ asset("admin/pages/scripts/components-date-time-pickers.min.js") }}"></script>
 <script>
     $('.date-picker').datepicker({
         rtl: App.isRTL(),

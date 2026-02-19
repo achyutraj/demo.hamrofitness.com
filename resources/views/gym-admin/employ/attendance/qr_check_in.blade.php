@@ -4,8 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    {!! HTML::style("admin/global/plugins/simple-line-icons/simple-line-icons.min.css") !!}
-    {!! HTML::style("admin/global/plugins/bootstrap/css/bootstrap.min.css") !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/simple-line-icons/simple-line-icons.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap/css/bootstrap.min.css") }}">
 
     <style>
         .ace-logo {
@@ -70,8 +70,8 @@
 
 </div>
 
-{!! HTML::script("admin/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js") !!}
-{!! HTML::script("admin/global/plugins/bootstrap/js/bootstrap.min.js") !!}
+<script src="{{ asset("admin/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js") }}"></script>
+<script src="{{ asset("admin/global/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
 
 </body>
 </html>

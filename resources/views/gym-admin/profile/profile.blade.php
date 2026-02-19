@@ -1,12 +1,12 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('css/cropper.css')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("css/cropper.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 
 
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
     <style>
         .error-msg {
             color: red;
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                            {!! Form::open(['route'=>'gym-admin.profile.store','id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
                             <div class="form-body">
                                 <div class="form-group form-md-line-input">
                                     <label class="col-md-2 control-label" for="form_control_1">First Name</label>
@@ -209,7 +209,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form->close() !!}
                         </div>
                     </div>
                 </div>
@@ -314,13 +314,13 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/pages/scripts/components-date-time-pickers.min.js') !!}
-    {!! HTML::script('js/cropper.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('admin/webcam/webcam.js') !!}
-    {!! HTML::script('admin/webcam/webcam.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/pages/scripts/components-date-time-pickers.min.js") }}"></script>
+    <script src="{{ asset("js/cropper.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.min.js") }}"></script>
     <script>
         $('#updateProfile').click(function () {
             $.easyAjax({

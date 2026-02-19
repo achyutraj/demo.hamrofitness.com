@@ -1,4 +1,4 @@
-{!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
     <span class="caption-subject font-red-sunglo bold uppercase"><i class="icon-pencil"></i> Assign Role</span>
@@ -6,7 +6,7 @@
 <div class="modal-body">
 
     <div class="portlet-body">
-        {!! Form::open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
         <div class="row">
             <div class="col-md-12">
 
@@ -43,7 +43,7 @@
 
             </div>
         </div>
-        {!! Form::close() !!}
+        {{ html()->form->close() !!}
     </div>
 </div>
 </div>
@@ -59,9 +59,9 @@
     </div>
 </div>
 
-{!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
-{!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-{!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+<link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
+<script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+<script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
 
 <script>
     $('#save-form').click(function(){

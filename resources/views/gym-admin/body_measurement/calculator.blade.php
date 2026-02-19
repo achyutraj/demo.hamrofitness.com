@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-select/css/bootstrap-select.min.css") }}">
     <style>
         .m-heading-2 {
             margin: 0 0 20px;
@@ -48,7 +48,7 @@
                 <div class="portlet-body">
                     <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-12">
-                            {!! Form::open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
                             <div class="form-body">
                                 <div class="form-group form-md-line-input ">
                                     <select class="bs-select form-control targetData" data-live-search="true"
@@ -144,7 +144,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form->close() !!}
                         </div>
 
                         <div class="col-lg-7 col-md-7 col-sm-12" id="result_data">
@@ -159,9 +159,9 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/components-bootstrap-select.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-select/js/bootstrap-select.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/components-bootstrap-select.min.js") }}"></script>
     <script>
         $('#fat_calculate').hide();
         $('#calorie_calculate').hide();

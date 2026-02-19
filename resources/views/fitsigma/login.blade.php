@@ -5,12 +5,12 @@
         <div class="login-logo">
             <a href="{{ route('gym-admin.dashboard.index') }}">
                 @if(is_null($gymSettings))
-                    {!! HTML::image(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness',['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) !!}
+                    {{ html()->img(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness')->attributes(['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) }}
                 @else
                     @if($gymSettings->image != '')
-                        {!! HTML::image($gymSettingPath.$gymSettings->image, 'Hamrofitness',array('class' => 'img-responsive inline-block', 'style' => 'height: 60px;')) !!}
+                        {{ html()->img($gymSettingPath.$gymSettings->image, 'Hamrofitness')->attributes(array('class' => 'img-responsive inline-block', 'style' => 'height: 60px;')) }}
                     @else
-                        {!! HTML::image(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness',['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) !!}
+                        {{ html()->img(asset('/fitsigma/images/').'/'.'fitsigma-logo-full-red.png', 'Hamrofitness')->attributes(['class' => 'img-responsive inline-block', 'style' => 'height: 60px;']) }}
                     @endif
                 @endif
             </a>
@@ -24,7 +24,13 @@
                     </div>
                 </div>
             </div>
-            {!! Form::open(array("id" => "login-form", "class" => 'login-form')) !!}
+            {{ html()->form()
+        ->id('login-form')
+        ->class('login-form')
+        ->open() }}
+
+
+            {{-- {{ html()->form->open(array("id" => "login-form", "class" => 'login-form')) }} --}}
 
             <div class="form-group">
                 <label for="username"><b>Username</b> <span class="required">*</span> </label>
@@ -52,7 +58,7 @@
                     <button class="btn blue btn-block" type="submit">Sign In</button>
                 </div>
             </div>
-            {!! Form::close() !!}
+            {{ html()->form()->close() }}
 
         </div>
         <div class="panel panel-body text-center" style="margin-top: 16px">

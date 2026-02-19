@@ -5,7 +5,7 @@ HamroFitness | Membership Due Payments
 @endsection
 
 @section('CSS')
-    {!! HTML::style('fitsigma_customer/bower_components/datatables/jquery.dataTables.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/datatables/jquery.dataTables.min.css") }}">
 @endsection
 
 @section('content')
@@ -48,7 +48,7 @@ HamroFitness | Membership Due Payments
 @endsection
 
 @section('JS')
-    {!! HTML::script('fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/datatables/jquery.dataTables.min.js") }}"></script>
     <script>
         var table = $('#duePaymentTable');
         table.dataTable({

@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 @stop
 
 @section('content')
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <!-- {!! Form::open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!} -->
+                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!} -->
                             <form action="{{route('gym-admin.gymmerchantroles.store')}}" method="post">
                             {{csrf_field()}}
                             <div class="form-body">
@@ -76,11 +76,11 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
 
     <script>
 

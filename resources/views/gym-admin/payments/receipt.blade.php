@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body tabbable-line">
     <div class="portlet-body">
-        {!! Form::open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
         <div class="tab-content">
             <div class="tab-pane active" id="portlet_tab1">
                 <div class="row">
@@ -43,7 +43,7 @@
                                             <td valign="middle" align="center"
                                                 style="padding:30px 0;text-align:center;background-color:white;border-collapse:collapse">
 
-                                                {!! HTML::image('admin/admin/layout4/img/hp-logo-black-big-2.png', 'Logo',array("style" => "margin:auto;text-align:center;border:0;outline:none;text-decoration:none", "align" => "center",'border' => '0','width' => '240')) !!}
+                                                {{ html()->img('admin/admin/layout4/img/hp-logo-black-big-2.png', 'Logo')->attributes(array("style" => "margin:auto;text-align:center;border:0;outline:none;text-decoration:none", "align" => "center",'border' => '0','width' => '240')) }}
 
                                             </td>
 
@@ -317,7 +317,7 @@
                 </div>
             </div>
         </div>
-        {!! Form::close() !!}
+        {{ html()->form->close() !!}
     </div>
 </div>
 </div>

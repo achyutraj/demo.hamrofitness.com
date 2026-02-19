@@ -5,7 +5,7 @@ HamroFitness | Customer Message
 @endsection
 
 @section('CSS')
-{!! HTML::style('fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.css") }}">
 @endsection
 
 @section('content')
@@ -57,8 +57,8 @@ HamroFitness | Customer Message
 @endsection
 
 @section('JS')
-    {!! HTML::script('fitsigma_customer/bower_components/html5-editor/wysihtml5-0.3.0.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/html5-editor/wysihtml5-0.3.0.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.js") }}"></script>
 <script>
     $('.compose-mail').on('click', function () {
         var url = "{{ route('customer-app.message.create') }}";

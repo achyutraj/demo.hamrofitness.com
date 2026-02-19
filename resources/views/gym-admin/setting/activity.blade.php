@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/datatables.min.css') !!}
-    {!! HTML::style('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/datatables.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css") }}">
 
 @stop
 
@@ -124,11 +124,11 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/scripts/datatable.js') !!}
-    {!! HTML::script('admin/pages/scripts/table-datatables-managed.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/datatables.min.js') !!}
-    {!! HTML::script('admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
-    {!! HTML::script('admin/global/plugins/bootbox/bootbox.min.js') !!}
+    <script src="{{ asset("admin/global/scripts/datatable.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/table-datatables-managed.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootbox/bootbox.min.js") }}"></script>
     <script>
         var clientTable = $('#reserved_table');
 

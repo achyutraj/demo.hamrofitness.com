@@ -12,7 +12,7 @@
             <tbody>
             <tr>
                 <td style="vertical-align: top; padding-bottom:30px;" align="center"><a href="#" >
-                        {!!  $logo !!}
+                        {{ $logo }}
                     </a> </td>
             </tr>
             </tbody>
@@ -33,7 +33,7 @@
                         ?>
 
                         <p>
-                            <img src="{!!$message->embedData(\SimpleSoftwareIO\QrCode\Facades\QrCode::format('png')->size(250)->generate($checkInUrl), 'QrCode.png', 'image/png')!!}">
+                            <img src="{{ $message->embedData(\SimpleSoftwareIO\QrCode\Facades\QrCode::format('png')->size(250)->generate($checkInUrl), 'QrCode.png', 'image/png') }}">
                         </p>
 
                         @if($url != null)

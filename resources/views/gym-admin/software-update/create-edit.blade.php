@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/datepicker.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/datepicker.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
 @stop
 
 @section('content')
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                             {!! Form::open(['id'=>'gym-software-data','class'=>'ajax-form']) !!}
+                             {{ html()->form->open(['id'=>'gym-software-data','class'=>'ajax-form']) !!}
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="portlet light ">
@@ -76,7 +76,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            {!! Form::close() !!}
+                            {{ html()->form->close() !!}
                         </div>
                     </div>
                 </div>
@@ -88,10 +88,10 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }}">
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js") }}"></script>
 
     <script>
         $('.textarea_editor').wysihtml5();

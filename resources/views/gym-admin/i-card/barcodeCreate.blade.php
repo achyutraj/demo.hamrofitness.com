@@ -17,7 +17,7 @@
                         $encryptedParameter = rand(1111,9999).$client->id.'-'.rand(111,999).\Str::random(19);
                         $encryptedParameter = \Illuminate\Support\Facades\Crypt::encrypt($encryptedParameter);
                         ?>
-                        {!!  DNS1D::getBarcodeHTML($client->fullname, 'C39') !!}
+                        {{ DNS1D::getBarcodeHTML($client->fullname, 'C39') }}
                     </div>
                 </div>
             </div>

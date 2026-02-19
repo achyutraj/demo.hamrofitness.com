@@ -2,8 +2,8 @@
 
 @section('CSS')
 
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css") }}">
 @stop
 
 @section('content')
@@ -36,7 +36,7 @@
                         </div>
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
-                                {!! Form::open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+                                {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
                                 <div class="form-body">
                                     <div class="form-group form-md-line-input form-md-floating-label">
                                         <select class="form-control" id="category" name="category" required>
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                {{ html()->form->close() !!}
                             <!-- END FORM-->
                         </div>
                     </div>
@@ -96,18 +96,18 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
-    {!! HTML::script('admin/pages/scripts/ui-buttons.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
+    <script src="{{ asset("admin/pages/scripts/ui-buttons.min.js") }}"></script>
 
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
 
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') !!}
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js") }}"></script>
 
 
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/jquery.validate.min.js') !!}
-    {!! HTML::script('admin/global/plugins/jquery-validation/js/additional-methods.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/jquery.validate.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/jquery-validation/js/additional-methods.min.js") }}"></script>
 
     <script>
         var FormValidationMd = function() {

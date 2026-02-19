@@ -1,9 +1,9 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('css/cropper.css')!!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-toastr/toastr.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("css/cropper.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-toastr/toastr.min.css") }}">
     @stack('general-styles')
     @stack('mail-styles')
     @stack('sms-styles')
@@ -185,7 +185,7 @@
 @stop
 
 @section('footer')
-    {!! HTML::script('admin/pages/scripts/ui-toastr.js') !!}
+    <script src="{{ asset("admin/pages/scripts/ui-toastr.js") }}"></script>
     @stack('general-scripts')
     @stack('mail-scripts')
     @stack('sms-scripts')

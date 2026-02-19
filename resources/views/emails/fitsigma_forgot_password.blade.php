@@ -636,7 +636,7 @@
                                                         <td class="vertical-middle" style="padding: 0px 0px 10px">
                                                             <a href="{{ URL::to('/') }}">
 
-                                                                {!! HTML::image($gymSettingPath.'fitness-plus.png','',array('width' => '86','height' => '28')) !!}
+                                                                {{ html()->img($gymSettingPath.'fitness-plus.png','')->attributes(array('width' => '86','height' => '28')) }}
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -652,17 +652,17 @@
                                                                 {{--<tr>--}}
                                                                     {{--<td class="vertical-middle">--}}
                                                                         {{--<a href="http://www.facebook.com/huntplex">--}}
-                                                                            {{--{!! HTML::image('img/email/social_facebook.png')  !!}--}}
+                                                                            {{--<img src="{{ asset("img/email/social_facebook.png") }}">--}}
                                                                         {{--</a>--}}
                                                                     {{--</td>--}}
                                                                     {{--<td class="vertical-middle">--}}
                                                                         {{--<a href="https://twitter.com/huntplex">--}}
-                                                                            {{--{!! HTML::image('img/email/social_twitter.png')  !!}--}}
+                                                                            {{--<img src="{{ asset("img/email/social_twitter.png") }}">--}}
                                                                         {{--</a>--}}
                                                                     {{--</td>--}}
                                                                     {{--<td class="vertical-middle">--}}
                                                                         {{--<a href="https://plus.google.com/u/0/109081475331501655402/about">--}}
-                                                                            {{--{!! HTML::image('img/email/social_googleplus.png')  !!}--}}
+                                                                            {{--<img src="{{ asset("img/email/social_googleplus.png") }}">--}}
                                                                         {{--</a>--}}
                                                                     {{--</td>--}}
                                                                 {{--</tr>--}}
@@ -691,7 +691,7 @@
                                 <td class="wrapper last" style="padding: 10px 20px 0px 0px">
                                     <h4 style="margin: 5px 0 15px 0;font-size: 22px;">{{ $mailHeading }}</h4>
                                     <p style="font-size: 14px;line-height: 19px;color: #222222;font-family: 'Open Sans;">
-                                        {!! $emailText !!}
+                                        {{ $emailText }}
                                     </p>
                                 @if($url != NULL && $url != '')
                                     <!-- BEGIN: Note Panel -->
@@ -725,7 +725,7 @@
                                         <p>
                                              Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. Pellentesque sem dolor, fringilla et pharetra vitae
                                         </p>
-                                        {!! HTML::image('admin/admin/pages/media/email/article.png','',array('class' => 'ie10-responsive')) !!}
+                                        {{ html()->img('admin/admin/pages/media/email/article.png','')->attributes(array('class' => 'ie10-responsive')) }}
                                     </td>
                                     <td class="expander">
                                     </td>

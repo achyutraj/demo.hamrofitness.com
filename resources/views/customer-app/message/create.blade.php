@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body">
     <div class="portlet-body">
-        {!! Form::open(['route'=>'customer-app.message.store','id'=>'composeMailForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+        {{ html()->form->open(['route'=>'customer-app.message.store','id'=>'composeMailForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
             <div class="form-group">
                 <label class="col-sm-12">Choose Member</label>
                 <div class="col-sm-12">
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..."></textarea>
             </div>
-        {!! Form::close() !!}
+        {{ html()->form->close() !!}
     </div>
 </div>
 <hr>

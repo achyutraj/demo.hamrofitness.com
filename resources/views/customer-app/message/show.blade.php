@@ -5,7 +5,7 @@ HamroFitness | Customer Mail Detail
 @endsection
 
 @section('CSS')
-{!! HTML::style('fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.css') !!}
+<link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.css") }}">
 <style>
     .padding-button {
         padding-left: 22px;
@@ -58,7 +58,7 @@ HamroFitness | Customer Mail Detail
                             <div class="chat-body">
                                 <div class="chat-text">
                                     <h4>@if($message->to == 'merchant') {{ $message->client->first_name.' '.$message->client->last_name }} @else {{ $message->merchant->first_name.' '.$message->merchant->last_name }} @endif</h4>
-                                    <p> {!! nl2br($message->text) !!} </p>
+                                    <p> {{ nl2br($message->text) }} </p>
                                     <b>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $message->created_at)->diffForHumans() }}</b> </div>
                             </div>
                         </li>
@@ -79,10 +79,10 @@ HamroFitness | Customer Mail Detail
 @endsection
 
 @section('JS')
-{!! HTML::script('fitsigma_customer/js/chat.js') !!}
-{!! HTML::script('fitsigma_customer/js/jquery.slimscroll.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/html5-editor/wysihtml5-0.3.0.js') !!}
-{!! HTML::script('fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.js') !!}
+<script src="{{ asset("fitsigma_customer/js/chat.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/js/jquery.slimscroll.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/html5-editor/wysihtml5-0.3.0.js") }}"></script>
+<script src="{{ asset("fitsigma_customer/bower_components/html5-editor/bootstrap-wysihtml5.js") }}"></script>
     <script>
         $(function () {
             $('.chat-list').animate({

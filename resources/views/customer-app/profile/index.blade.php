@@ -5,9 +5,9 @@ HamroFitness | Customer Profile
 @endsection
 
 @section('CSS')
-    {!! HTML::style('fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css') !!}
-    {!! HTML::style('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') !!}
-    {!! HTML::style('css/cropper.css')!!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/cropper.css") }}">
     <style>
         .anniversary-display {
             display: none;
@@ -37,7 +37,7 @@ HamroFitness | Customer Profile
             <div class="white-box p-l-20 p-r-20">
                 <div class="row">
                     <div class="col-md-12">
-                        {!! Form::open(['route'=>'customer-app.profile.store','id'=>'profileForm','class'=>'form-material ajax-form','method'=>'POST','files' => true]) !!}
+                        {{ html()->form->open(['route'=>'customer-app.profile.store','id'=>'profileForm','class'=>'form-material ajax-form','method'=>'POST','files' => true]) !!}
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -187,7 +187,7 @@ HamroFitness | Customer Profile
                         <div class="form-group">
                             <button class="btn btn-primary waves-effect" id="submit-btn">Submit</button>
                         </div>
-                        {!! Form::close() !!}
+                        {{ html()->form->close() !!}
                     </div>
                 </div>
             </div>
@@ -284,11 +284,11 @@ HamroFitness | Customer Profile
 @endsection
 
 @section('JS')
-    {!! HTML::script('fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js') !!}
-    {!! HTML::script('admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') !!}
-    {!! HTML::script('js/cropper.js') !!}
-    {!! HTML::script('admin/webcam/webcam.js') !!}
-    {!! HTML::script('admin/webcam/webcam.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js") }}"></script>
+    <script src="{{ asset("js/cropper.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.js") }}"></script>
+    <script src="{{ asset("admin/webcam/webcam.min.js") }}"></script>
     <script>
         $('#datepicker-autoclose, #datepicker-autoclose-dob').datepicker({
             autoclose: true,

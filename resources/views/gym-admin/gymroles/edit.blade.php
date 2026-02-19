@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('admin/global/plugins/ladda/ladda-themeless.min.css') !!}
+    <link rel="stylesheet" href="{{ asset("admin/global/plugins/ladda/ladda-themeless.min.css") }}">
 @stop
 
 @section('content')
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <!-- {!! Form::open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'PUT','files' => true]) !!} -->
+                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'PUT','files' => true]) !!} -->
                             <form action="{{route('gym-admin.gymmerchantroles.updateData', $role->id)}}" method="post">
                             {{csrf_field()}}
                             <div class="form-body">
@@ -76,7 +76,7 @@
 
 @section('footer')
 
-    {!! HTML::script('admin/global/plugins/ladda/spin.min.js') !!}
-    {!! HTML::script('admin/global/plugins/ladda/ladda.min.js') !!}
+    <script src="{{ asset("admin/global/plugins/ladda/spin.min.js") }}"></script>
+    <script src="{{ asset("admin/global/plugins/ladda/ladda.min.js") }}"></script>
 
 @stop

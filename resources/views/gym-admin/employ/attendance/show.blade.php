@@ -1,7 +1,7 @@
 @extends('layouts.gym-merchant.gymbasic')
 
 @section('CSS')
-    {!! HTML::style('fitsigma_customer/bower_components/calendar/dist/fullcalendar.css') !!}
+    <link rel="stylesheet" href="{{ asset("fitsigma_customer/bower_components/calendar/dist/fullcalendar.css") }}">
 @stop
 
 @section('content')
@@ -35,9 +35,9 @@
 @endsection
 
 @section('footer')
-    {!! HTML::script('fitsigma_customer/bower_components/moment/moment.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/calendar/dist/fullcalendar.min.js') !!}
-    {!! HTML::script('fitsigma_customer/bower_components/calendar/jquery-ui.min.js') !!}
+    <script src="{{ asset("fitsigma_customer/bower_components/moment/moment.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/calendar/dist/fullcalendar.min.js") }}"></script>
+    <script src="{{ asset("fitsigma_customer/bower_components/calendar/jquery-ui.min.js") }}"></script>
     <script>
         $('#calendar').fullCalendar({ //re-initialize the calendar
             defaultView: 'month', // change default view with available options from http://arshaw.com/fullcalendar/docs/views/Available_Views/
