@@ -34,7 +34,10 @@ class ProductSales extends Model
         'id','customer_type','client_id','employ_id','customer_name','product_name','product_price','product_quantity','product_discount','product_amount','branch_id'
     ];
 
-    protected $dates = [ 'created_at','next_payment_date'];
+    protected $casts = [
+        'created_at' => 'datetime',
+        'next_payment_date' => 'datetime',
+    ];
 
     public function getActivitylogOptions(): LogOptions
     {
