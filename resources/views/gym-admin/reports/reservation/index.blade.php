@@ -42,7 +42,7 @@
                 <div class="portlet-body">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-5">
-                            {{ html()->form->open(['id'=>'createBookingReport','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'createBookingReport','class'=>'ajax-form']) }}
                             <div class="form-body">
                                 <div class="form-group">
                                     <div id="reportrange" class="btn default">
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                         <div class="col-md-4" id="easyStats" style="display: none;margin-top: 50px;margin-left: 20px">
                             <div class="widget-thumb widget-bg-color-dark-light text-uppercase margin-bottom-20 ">

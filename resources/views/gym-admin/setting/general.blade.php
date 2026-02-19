@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {{ html()->form->open(['route'=>'gym-admin.setting.store','id'=>'settingUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+                    {{ html()->form()->open(['route'=>'gym-admin.setting.store','id'=>'settingUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) }}
                         <div class="form-body col-md-6 col-md-offset-1">
                             @if($user->is_admin == 1)
                             <div class="form-group form-md-line-input hidden-xs hidden-sm">
@@ -114,7 +114,7 @@
                                 <a href="javascript:;" class="btn default">Cancel</a>
                             </div>
                         </div>
-                    {{ html()->form->close() !!}
+                    {{ html()->form()->close() }}
                 </div>
             </div>
         </div>

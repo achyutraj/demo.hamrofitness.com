@@ -40,7 +40,7 @@
                         </div>
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
-                            {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+                            {{ html()->form()->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) }}
                             <div class="form-body">
                                 <div class="form-group form-md-line-input form-md-floating-label col-md-6">
                                     <input type="text" class="form-control" name="title" id="title">
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                         <!-- END FORM-->
                         </div>
                     </div>

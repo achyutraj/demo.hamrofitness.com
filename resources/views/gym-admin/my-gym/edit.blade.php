@@ -52,7 +52,7 @@
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row">
-                                                        {{ html()->form->open(['id'=>'myGymDetails','method'=>'post','class' => 'ajax_form']) !!}
+                                                        {{ html()->form()->open(['id'=>'myGymDetails','method'=>'post','class' => 'ajax_form']) }}
                                                         <div class="col-md-6">
                                                             <div class="form-body">
                                                                 <div class="form-group form-md-line-input">
@@ -119,7 +119,7 @@
                                                             </div>
                                                         </div>
                                                         {{ Form::hidden('updateType','details') }}
-                                                        {{ html()->form->close() !!}
+                                                        {{ html()->form()->close() }}
                                                     </div>
                                                     <div class="row">
                                                         <div class=" col-md-offset-5 col-md-2">

@@ -6,7 +6,7 @@
     <span class="caption-subject font-red-sunglo bold uppercase"><i class="fa fa-plus"></i> Renew</span>
 </div>
 <div class="modal-body">
-    {{ html()->form->open(['id' => 'followUpForm', 'class' => 'ajax-form']) !!}
+    {{ html()->form()->open(['id' => 'followUpForm', 'class' => 'ajax-form']) }}
 
     <input type="hidden" name="detail_id" value="{{ $enquiry->id }}">
 
@@ -111,7 +111,7 @@
         <div class="modal-footer">
             <a href="javascript:;" class="btn blue" id="add-branch-renew">Save</a>
         </div>
-        {{ html()->form->close() !!}
+        {{ html()->form()->close() }}
     </div>
 
     <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>

@@ -6,7 +6,7 @@
 <div class="modal-body">
 
     <div class="portlet-body">
-        {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+        {{ html()->form()->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) }}
         <div class="row">
             <div class="col-md-12">
 
@@ -43,7 +43,7 @@
 
             </div>
         </div>
-        {{ html()->form->close() !!}
+        {{ html()->form()->close() }}
     </div>
 </div>
 </div>

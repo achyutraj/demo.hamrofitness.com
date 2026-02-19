@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'PUT','files' => true]) !!} -->
+                            <!-- {{ html()->form()->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'PUT','files' => true]) }} -->
                             <form action="{{route('gym-admin.gymmerchantroles.updateData', $role->id)}}" method="post">
                             {{csrf_field()}}
                             <div class="form-body">

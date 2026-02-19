@@ -41,7 +41,7 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade active in" id="branchTab">
-                                    {{ html()->form->open(['id'=>'branchStoreForm','class'=>'ajax-form form-horizontal']) !!}
+                                    {{ html()->form()->open(['id'=>'branchStoreForm','class'=>'ajax-form form-horizontal']) }}
                                     <div class="form-wizard">
                                         <div class="form-body">
                                             <div class="form-group form-md-line-input">
@@ -156,10 +156,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{ html()->form->close() !!}
+                                    {{ html()->form()->close() }}
                                 </div>
                                 <div class="tab-pane fade" id="permissionTab">
-                                    {{ html()->form->open(['id'=>'updateRolesAndPermissionForm','class'=>'ajax-form form-horizontal']) !!}
+                                    {{ html()->form()->open(['id'=>'updateRolesAndPermissionForm','class'=>'ajax-form form-horizontal']) }}
                                     <div class="form-wizard">
                                         <div class="form-body">
                                             <div class="form-group form-md-line-input">
@@ -194,7 +194,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{ html()->form->close() !!}
+                                    {{ html()->form()->close() }}
                                 </div>
                             </div>
                         </div>

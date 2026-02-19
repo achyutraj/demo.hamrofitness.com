@@ -35,7 +35,7 @@
 							</div>
 						</div>
 						<div class="portlet-body">
-							{{ html()->form->open(['route'=> ['gym-admin.users.store'],'id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) !!}
+							{{ html()->form()->open(['route'=> ['gym-admin.users.store'],'id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal','method'=>'POST','files' => true]) }}
 							<div class="form-body col-md-6 col-md-offset-1">
 								<div class="form-group form-md-line-input">
 									<div class="input-icon right">
@@ -129,7 +129,7 @@
 									</div>
 								</div>
 							</div>
-							{{ html()->form->close() !!}
+							{{ html()->form()->close() }}
 						</div>
 					</div>
 

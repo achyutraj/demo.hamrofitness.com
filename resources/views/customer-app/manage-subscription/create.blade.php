@@ -36,7 +36,7 @@
             <div class="white-box p-l-20 p-r-20">
                 <div class="row">
                     <div class="col-md-6">
-                        {{ html()->form->open(['route'=>'customer-app.manage-subscription.store','id'=>'addSubscriptionStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+                        {{ html()->form()->open(['route'=>'customer-app.manage-subscription.store','id'=>'addSubscriptionStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) }}
                             @if(isset($businesses) && count($businesses) > 0)
                                 <div class="form-group">
                                     <label class="col-sm-12">Fitness Name</label>
@@ -75,7 +75,7 @@
                                 <button class="btn btn-primary waves-effect button-space" id="submit-btn">Submit</button>
                                 <button class="btn btn-default waves-effect">Back</button>
                             </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
             </div>

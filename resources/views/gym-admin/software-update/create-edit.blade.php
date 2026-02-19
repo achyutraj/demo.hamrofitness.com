@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="portlet-body">
-                             {{ html()->form->open(['id'=>'gym-software-data','class'=>'ajax-form']) !!}
+                             {{ html()->form()->open(['id'=>'gym-software-data','class'=>'ajax-form']) }}
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="portlet light ">
@@ -76,7 +76,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
                 </div>

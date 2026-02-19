@@ -14,7 +14,7 @@
     <section id="wrapper" class="login-register">
         <div class="login-box login-sidebar">
             <div class="white-box">
-                {{ html()->form->open(array('route' => ['customer.register-store'], 'method' => 'POST', "id" => "registerform", "class" => 'ajax-form form-horizontal form-material')) !!}
+                {{ html()->form()->open(array('route' => ['customer.register-store'], 'method' => 'POST', "id" => "registerform", "class" => 'ajax-form form-horizontal form-material')) }}
                     <a href="javascript:void(0)" class="text-center db">
                         <img src="{{ asset('fitsigma/images/fitness-plus.png') }}" height="60px">
                     </a>
@@ -72,7 +72,7 @@
                             <p>Already have an account? <a href="{{ route('customer.index') }}" class="text-primary m-l-5"><b>Sign In</b></a></p>
                         </div>
                     </div>
-                {{ html()->form->close() !!}
+                {{ html()->form()->close() }}
             </div>
         </div>
     </section>

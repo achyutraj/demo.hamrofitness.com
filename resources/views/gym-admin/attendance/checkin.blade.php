@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body tabbable-line">
     <div class="portlet-body">
-        {{ html()->form->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) !!}
+        {{ html()->form()->open(['id'=>'gym-offer_data','class'=>'ajax-form','method'=>'POST']) }}
         <div class="tab-content">
             <div class="tab-pane active" id="portlet_tab1">
                 <div class="row">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        {{ html()->form->close() !!}
+        {{ html()->form()->close() }}
     </div>
 </div>
 </div>

@@ -37,7 +37,7 @@ HamroFitness | Customer Profile
             <div class="white-box p-l-20 p-r-20">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ html()->form->open(['route'=>'customer-app.profile.store','id'=>'profileForm','class'=>'form-material ajax-form','method'=>'POST','files' => true]) !!}
+                        {{ html()->form()->open(['route'=>'customer-app.profile.store','id'=>'profileForm','class'=>'form-material ajax-form','method'=>'POST','files' => true]) }}
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -187,7 +187,7 @@ HamroFitness | Customer Profile
                         <div class="form-group">
                             <button class="btn btn-primary waves-effect" id="submit-btn">Submit</button>
                         </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
             </div>

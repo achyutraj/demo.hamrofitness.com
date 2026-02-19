@@ -30,7 +30,7 @@
         ->open() }}
 
 
-            {{-- {{ html()->form->open(array("id" => "login-form", "class" => 'login-form')) }} --}}
+            {{-- {{ html()->form()->open(array("id" => "login-form", "class" => 'login-form')) }} --}}
 
             <div class="form-group">
                 <label for="username"><b>Username</b> <span class="required">*</span> </label>

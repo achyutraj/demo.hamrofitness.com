@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+                            {{ html()->form()->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) }}
                             <div class="form-wizard">
                                 <div class="form-body">
                                     <ul class="nav nav-pills nav-justified steps">
@@ -111,7 +111,7 @@
                                     </div>
 
                                 </div>
-                                {{ html()->form->close() !!}
+                                {{ html()->form()->close() }}
                             </div>
                         </div>
                     </div>

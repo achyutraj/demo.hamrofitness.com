@@ -47,7 +47,7 @@
                 @endif
                 <div class="row">
                     <div class="col-md-12">
-                        {{ html()->form->open(['route'=>['customer-app.locker-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) !!}
+                        {{ html()->form()->open(['route'=>['customer-app.locker-payments.pay'],'class'=>'form-material form-horizontal','method'=>'POST']) }}
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="col-sm-6">Locker</label>
@@ -106,7 +106,7 @@
 
                         </div>
 
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
             </div>

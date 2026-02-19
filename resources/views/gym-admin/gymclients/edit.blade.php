@@ -187,7 +187,7 @@
                                         <div class="tab-content">
                                             <!-- PERSONAL INFO TAB -->
                                             <div class="tab-pane active" id="tab_1_1">
-                                                {{ html()->form->open(['id'=>'personal_details','class'=>'ajax-form','method'=>'POST']) !!}
+                                                {{ html()->form()->open(['id'=>'personal_details','class'=>'ajax-form','method'=>'POST']) }}
                                                 <input type="hidden" name="id" value="{{$client->id}}">
                                                 <input type="hidden" name="type" value="general">
 
@@ -500,12 +500,12 @@
                                                         Changes </a>
                                                     <a href="{{ URL::previous()}}" class="btn default"> Cancel </a>
                                                 </div>
-                                                {{ html()->form->close() !!}
+                                                {{ html()->form()->close() }}
                                             </div>
                                             <!-- CHANGE AVATAR TAB -->
                                             <div class="tab-pane" id="tab_1_2">
                                                 <p> Change Image of Client </p>
-                                                {{ html()->form->open(['id'=>'update_image','class'=>'ajax-form','method'=>'POST']) !!}
+                                                {{ html()->form()->open(['id'=>'update_image','class'=>'ajax-form','method'=>'POST']) }}
                                                 <div class="form-group">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
@@ -537,7 +537,7 @@
 
                                                 </div>
 
-                                                {{ html()->form->close() !!}
+                                                {{ html()->form()->close() }}
                                             </div>
                                             <!-- Membership TAB -->
                                             <div class="tab-pane" id="tab_1_3">

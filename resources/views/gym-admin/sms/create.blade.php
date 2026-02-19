@@ -33,7 +33,7 @@
                         </div>
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
-                            {{ html()->form->open(['id' => 'storePayments', 'class' => 'ajax-form', 'method' => 'POST']) !!}
+                            {{ html()->form()->open(['id' => 'storePayments', 'class' => 'ajax-form', 'method' => 'POST']) }}
 
                             <div class="form-body">
                                 <div class="row">
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                             <!-- END FORM-->
                         </div>
                     </div>

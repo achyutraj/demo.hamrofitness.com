@@ -32,7 +32,7 @@
                                         </div>
                                     </div>
                                     <div class="portlet-body">
-                                        {{ html()->form->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) !!}
+                                        {{ html()->form()->open(['id'=>'form_sample_3','class'=>'ajax-form','method'=>'POST']) }}
                                             <div class="form-group">
                                                 <label>Product Name</label>
                                                 <input type="text" class="form-control" value="{{ $product->name }}" readonly>
@@ -64,7 +64,7 @@
                                                 <span class="ladda-spinner"></span>
                                                 <div class="ladda-progress" style="width: 0px;"></div>
                                             </button>
-                                        {{ html()->form->close() !!}
+                                        {{ html()->form()->close() }}
                                     </div>
                                 </div>
                             </div>

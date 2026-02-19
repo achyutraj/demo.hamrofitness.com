@@ -48,7 +48,7 @@
                         </div>
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
-                            {{ html()->form->open(['id'=>'create-edit-product','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'create-edit-product','class'=>'ajax-form']) }}
                                 <div class="form-body">
                                     @if(isset($product->uuid))
                                         <input type="hidden" name="_method" value="PUT">
@@ -210,7 +210,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         <!-- END FORM-->
                         </div>
                     </div>

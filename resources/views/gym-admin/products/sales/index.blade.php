@@ -229,7 +229,7 @@
                                                          id="deleteProduct{{$product->id}}" role="dialog"
                                                          aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog modal-md" id="modal-data-application">
-                                                            {{ html()->form->open(['route' => ['gym-admin.sales.destroy', $product->id], 'class' => 'delete', 'method' => 'DELETE']) !!}
+                                                            {{ html()->form()->open(['route' => ['gym-admin.sales.destroy', $product->id], 'class' => 'delete', 'method' => 'DELETE']) }}
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
@@ -247,7 +247,7 @@
                                                                     <button type="button" data-dismiss="modal" class="btn">Cancel</button>
                                                                 </div>
                                                             </div>
-                                                            {{ html()->form->close() !!}
+                                                            {{ html()->form()->close() }}
 
                                                         </div>
                                                     </div>

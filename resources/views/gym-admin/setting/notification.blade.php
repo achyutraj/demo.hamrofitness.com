@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <div class="tab-content">
-                    {{ html()->form->open(['id'=>'notificationStore','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+                    {{ html()->form()->open(['id'=>'notificationStore','class'=>'ajax-form form-horizontal','method'=>'POST']) }}
                     <div class="form-body">
                         <table class="table table-striped table-responsive">
                             <thead>
@@ -396,7 +396,7 @@
                             </div>
                         </div>
                     </div>
-                    {{ html()->form->close() !!}
+                    {{ html()->form()->close() }}
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@
             <div class="white-box p-l-20 p-r-20">
                 <div class="row">
                     <div class="col-md-6">
-                        {{ html()->form->open(['route'=>'customer-app.manage-subscription.store','id'=>'addReservationStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) !!}
+                        {{ html()->form()->open(['route'=>'customer-app.manage-subscription.store','id'=>'addReservationStoreForm','class'=>'ajax-form form-material form-horizontal','method'=>'POST']) }}
                             <div class="form-group">
                                 <label class="col-sm-12">Locker </label>
                                 <div class="col-sm-12">
@@ -81,7 +81,7 @@
                                 <button class="btn btn-primary waves-effect button-space" id="submit-btn">Submit</button>
                                 <button class="btn btn-default waves-effect">Back</button>
                             </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
             </div>

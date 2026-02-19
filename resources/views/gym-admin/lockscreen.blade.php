@@ -27,7 +27,7 @@
                         <h1>{{ $userValue->first_name }}</h1>
                         <small> {{ $userValue->email }} </small><br/>
                         <span class="locked"> Locked </span>
-                        {{ html()->form->open(array('route' => ['merchant.lockLogin'], 'method' => 'POST', "id" => "login-form", "class" => 'form-inline')) !!}
+                        {{ html()->form()->open(array('route' => ['merchant.lockLogin'], 'method' => 'POST', "id" => "login-form", "class" => 'form-inline')) }}
                         <div id="error-message"></div>
                         <div class="input-group input-medium">
                             <input type="password" class="form-control" placeholder="Password" name="password" id="password">
@@ -46,7 +46,7 @@
                         <div class="relogin">
                             <a href="{{ route('merchant.logout') }}"> Not {{ $userValue->first_name }} ? </a>
                         </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                     </div>
                 </div>
                 <small> {{ \Carbon\Carbon::now('Asia/Kathmandu')->year }} &copy; HamroFitness </small>

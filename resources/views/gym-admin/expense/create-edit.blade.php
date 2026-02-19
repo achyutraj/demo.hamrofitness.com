@@ -48,7 +48,7 @@
                         </div>
                         <div class="portlet-body">
                             <!-- BEGIN FORM-->
-                            {{ html()->form->open(['id'=>'create-edit-expense','class'=>'ajax-form','files'=>true]) !!}
+                            {{ html()->form()->open(['id'=>'create-edit-expense','class'=>'ajax-form','files'=>true]) }}
                             <div class="form-body">
                                 @if(isset($expense->uuid))
                                     <input type="hidden" name="_method" value="PUT">
@@ -274,7 +274,7 @@
                                     </div>
                                 </div>
                             </div>
-                        {{ html()->form->close() !!}
+                        {{ html()->form()->close() }}
                         <!-- END FORM-->
                         </div>
                     </div>

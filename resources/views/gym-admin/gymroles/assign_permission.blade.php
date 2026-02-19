@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="portlet-body form">
-                            {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) !!}
+                            {{ html()->form()->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) }}
 
 
                             <div class="col-xs-12 bg-grey-steel bg-font-grey-steel">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
 

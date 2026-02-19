@@ -56,7 +56,7 @@
                                 </div>
                             </div>
 
-                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'clients_details','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+                            {{ html()->form()->open(['route'=>'gym-admin.profile.store','id'=>'clients_details','class'=>'ajax-form ','method'=>'POST','files' => true]) }}
                             @if(!is_null($client) && isset($client->id))
                                 <input type="hidden" name="client_id" value="{{ $client->id }}">
                             @endif
@@ -254,7 +254,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
                 </div>

@@ -44,7 +44,7 @@
                                 <i class="icon-plus font-red"></i><span class="caption-subject font-red bold uppercase">Add Target</span></div>
                         </div>
                         <div class="portlet-body">
-                            {{ html()->form->open(['id'=>'addTargetForm','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'addTargetForm','class'=>'ajax-form']) }}
 
                             <div class="form-body">
 
@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
 
                     </div>

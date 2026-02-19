@@ -101,7 +101,7 @@
 
     <div class="modal fade bs-modal-md in" id="addReviewModal" role="dialog" aria-labelledby="addReviewModal" aria-hidden="true">
         <div class="modal-dialog modal-md" id="modal-data-application">
-            {{ html()->form->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) !!}
+            {{ html()->form()->open(['id'=>'storePayments','class'=>'ajax-form form-horizontal','method'=>'POST']) }}
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -118,7 +118,7 @@
                 </div>
             </div>
             <!-- /.modal-content -->
-            {{ html()->form->close() !!}
+            {{ html()->form()->close() }}
         </div>
         <!-- /.modal-dialog -->
     </div>

@@ -34,7 +34,7 @@
                                 <i class="icon-plus font-red"></i><span class="caption-subject font-red bold uppercase">Edit Target</span></div>
                         </div>
                         <div class="portlet-body">
-                            {{ html()->form->open(['id'=>'editTargetForm','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'editTargetForm','class'=>'ajax-form']) }}
                                 <input type="hidden" name="_method" value="put">
                             <div class="form-body">
 
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
 
                     </div>

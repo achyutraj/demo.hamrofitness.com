@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            {{ html()->form->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) !!}
+                            {{ html()->form()->open(['route'=>'gym-admin.profile.store','id'=>'storePayments','class'=>'ajax-form ','method'=>'POST','files' => true]) }}
                             @if(!is_null($subscription) && isset($subscription->id))
                                 <input type="hidden" name="subscription_id" value="{{ $subscription->id }}">
                             @endif
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
                 </div>

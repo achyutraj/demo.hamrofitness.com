@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="portlet-body form">
-                            <!-- {{ html()->form->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) !!} -->
+                            <!-- {{ html()->form()->open(['id'=>'profileUpdateForm','class'=>'ajax-form form-horizontal form-bordered form-row-stripped','method'=>'POST','files' => true]) }} -->
                             <form action="{{route('gym-admin.assignPermissionEmploy', $role->id)}}" class="form-horizontal form-bordered form-row-stripped" method="post" enctype="multipart/form-data" >
                             {{csrf_field()}}
                             <div class="col-xs-12 bg-grey-steel bg-font-grey-steel">

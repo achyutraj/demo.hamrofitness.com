@@ -44,7 +44,7 @@
                 <div class="portlet-body">
                     <div class="row">
                         <div class="col-md-5">
-                            {{ html()->form->open(['id'=>'createTargetReport','class'=>'ajax-form']) !!}
+                            {{ html()->form()->open(['id'=>'createTargetReport','class'=>'ajax-form']) }}
                             <div class="form-body">
                                 <div class="form-group form-md-line-input ">
                                     <select class="bs-select form-control targetData" data-live-search="true"
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{ html()->form->close() !!}
+                            {{ html()->form()->close() }}
                         </div>
                     </div>
                 </div>

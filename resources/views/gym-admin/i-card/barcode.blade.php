@@ -82,7 +82,7 @@
                                 <h3>Select Clients</h3>
 
 
-                                {{ html()->form->open(['id'=>'generateICardForm','class'=>'ajax-form']) !!}
+                                {{ html()->form()->open(['id'=>'generateICardForm','class'=>'ajax-form']) }}
 
                                 <div class="row">
                                     <div class="col-md-8">
@@ -114,7 +114,7 @@
                                         </table>                                        <!-- END EXAMPLE TABLE PORTLET-->
                                     </div>
                                 </div>
-                                {{ html()->form->close() !!}
+                                {{ html()->form()->close() }}
 
                                 <hr>
                                 <div class="row">

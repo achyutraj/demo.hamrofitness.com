@@ -46,7 +46,7 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    {{ html()->form->open(['id'=>'edit-category-'.$category->uuid,'class'=>'ajax-form']) !!}
+                                    {{ html()->form()->open(['id'=>'edit-category-'.$category->uuid,'class'=>'ajax-form']) }}
                                     <input type="hidden" name="_method" value="PUT">
                                     <div class="modal-body">
                                         <div class="row">
@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{ html()->form->close() !!}
+                                    {{ html()->form()->close() }}
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            {{ html()->form->open(['id'=>'create-category','class'=>'ajax-form']) !!}
+            {{ html()->form()->open(['id'=>'create-category','class'=>'ajax-form']) }}
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            {{ html()->form->close() !!}
+            {{ html()->form()->close() }}
         </div>
     </div>
 </div>

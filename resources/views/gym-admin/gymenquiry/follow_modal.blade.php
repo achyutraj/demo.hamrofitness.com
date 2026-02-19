@@ -6,7 +6,7 @@
     <span class="caption-subject font-red-sunglo bold uppercase"><i class="fa fa-plus"></i> Follow Up</span>
 </div>
 <div class="modal-body">
-    {{ html()->form->open(['id'=>'followUpForm','class'=>'ajax-form']) !!}
+    {{ html()->form()->open(['id'=>'followUpForm','class'=>'ajax-form']) }}
 
     <input type="hidden" name="enquiry_id" value="{{ $enquiry->id }}">
 
@@ -128,7 +128,7 @@
     <div class="modal-footer">
         <a href="javascript:;" class="btn blue" id="add-follow-up" >Save</a>
     </div>
-    {{ html()->form->close() !!}
+    {{ html()->form()->close() }}
 </div>
 
 <script src="{{ asset("admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}"></script>

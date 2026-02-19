@@ -27,7 +27,7 @@
         <div class="page-content-inner">
 
             <div class="row">
-                {{ html()->form->open(['route'=>'gym-admin.client.update','id'=>'clients_details','class'=>'ajax-form','method'=>'POST']) !!}
+                {{ html()->form()->open(['route'=>'gym-admin.client.update','id'=>'clients_details','class'=>'ajax-form','method'=>'POST']) }}
                 <div class="col-md-6">
                     <!-- BEGIN SAMPLE FORM PORTLET-->
                     <div class="portlet light ">
@@ -91,7 +91,7 @@
                     </div>
                     <!-- END SAMPLE FORM PORTLET-->
                 </div>
-                {{ html()->form->close() !!}
+                {{ html()->form()->close() }}
             </div>
         </div>
         <!-- END PAGE CONTENT INNER -->
