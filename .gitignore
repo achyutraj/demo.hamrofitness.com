@@ -29,7 +29,7 @@
 /public/storage
 /storage/*.key
 /vendor/
-
+/public/uploads
 .env.backup
 storage/framework/
 storage/logs/
